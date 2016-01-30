@@ -1,64 +1,64 @@
 fileFormatVersion: 2
 guid: c6492146a2c291a40a4290e355aa9566
-timeCreated: 1454185349
+timeCreated: 1454187829
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ingredientsSheet_0
-    21300002: ingredientsSheet_1
-    21300004: ingredientsSheet_2
-    21300006: ingredientsSheet_3
-    21300008: ingredientsSheet_4
-    21300010: ingredientsSheet_7
-    21300012: ingredientsSheet_8
-    21300014: ingredientsSheet_9
-    21300016: ingredientsSheet_11
-    21300018: ingredientsSheet_13
-    21300020: ingredientsSheet_14
-    21300022: ingredientsSheet_16
-    21300024: ingredientsSheet_18
-    21300026: ingredientsSheet_19
-    21300028: ingredientsSheet_20
-    21300030: ingredientsSheet_21
-    21300032: ingredientsSheet_27
-    21300034: ingredientsSheet_28
-    21300036: ingredientsSheet_29
-    21300038: ingredientsSheet_30
-    21300040: ingredientsSheet_31
-    21300042: ingredientsSheet_32
-    21300044: ingredientsSheet_33
-    21300046: ingredientsSheet_38
-    21300048: ingredientsSheet_39
-    21300050: ingredientsSheet_40
-    21300052: ingredientsSheet_41
+    21300000: t1_chicken_liver
+    21300002: t1_corn
+    21300004: t1_water
+    21300006: t1_one_sock
+    21300008: t1_mystery_blood
+    21300010: t1_salt
+    21300012: t1_onion
+    21300014: t1_duck_Feet
+    21300016: t1_toad
+    21300018: t1_candles
+    21300020: t2_eye_of_newt
+    21300022: t2_animal_blood
+    21300024: t2_hemlock
+    21300026: t2_sage
+    21300028: t2_deathcap
+    21300030: t2_lodestone
+    21300032: t2_downsing_rod
+    21300034: t2_garlic
+    21300036: t2_swamp_gas
+    21300038: t2_sulphur
+    21300040: t3_0
+    21300042: t3_1
+    21300044: t3_2
+    21300046: t3_3
+    21300048: t3_4
+    21300050: t3_5
+    21300052: t3_6
     21300054: ingredientsSheet_42
-    21300056: ingredientsSheet_43
+    21300056: t3_7
     21300058: ingredientsSheet_44
-    21300060: ingredientsSheet_45
-    21300062: ingredientsSheet_46
-    21300064: ingredientsSheet_47
-    21300066: ingredientsSheet_48
-    21300068: ingredientsSheet_49
-    21300070: ingredientsSheet_51
-    21300072: ingredientsSheet_52
-    21300074: ingredientsSheet_54
-    21300076: ingredientsSheet_60
-    21300078: ingredientsSheet_64
-    21300080: ingredientsSheet_65
-    21300082: ingredientsSheet_66
-    21300084: ingredientsSheet_67
-    21300086: ingredientsSheet_68
-    21300088: ingredientsSheet_69
-    21300090: ingredientsSheet_72
-    21300092: ingredientsSheet_73
-    21300094: ingredientsSheet_75
-    21300096: ingredientsSheet_76
-    21300098: ingredientsSheet_77
-    21300100: ingredientsSheet_78
-    21300102: ingredientsSheet_79
-    21300104: ingredientsSheet_80
-    21300106: ingredientsSheet_81
-    21300108: ingredientsSheet_82
+    21300060: t3_8
+    21300062: t3_9
+    21300064: t4_0
+    21300066: t4_1
+    21300068: t4_2
+    21300070: t4_3
+    21300072: t4_5
+    21300074: t4_6
+    21300076: t4_4
+    21300078: t4_7
+    21300080: t4_8
+    21300082: t4_9
+    21300084: t4_10
+    21300086: t5_0
+    21300088: t5_1
+    21300090: t5_3
+    21300092: t5_2
+    21300094: t5_4
+    21300096: t5_5
+    21300098: t5_6
+    21300100: t5_6_1
+    21300102: t5_6_2
+    21300104: t5_7
+    21300106: t5_8
+    21300108: t5_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -105,7 +105,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: ingredientsSheet_0
+    - name: t1_chicken_liver
       rect:
         serializedVersion: 2
         x: 71
@@ -125,10 +125,10 @@ TextureImporter:
         - {x: 58.55087, y: -19.063232}
         - {x: 58.55087, y: 29.936768}
         - {x: 28.550869, y: 60.936768}
-    - name: ingredientsSheet_1
+    - name: t1_corn
       rect:
         serializedVersion: 2
-        x: 685
+        x: 672
         y: 5968
         width: 359
         height: 349
@@ -136,15 +136,17 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -43.931763, y: 56.543457}
-        - {x: -56.931763, y: 36.543457}
-        - {x: -56.931763, y: -54.456543}
-        - {x: -51.931763, y: -55.456543}
-        - {x: 8.068237, y: -55.456543}
-        - {x: 58.068237, y: -29.456543}
-        - {x: 58.068237, y: 48.543457}
-        - {x: 56.068237, y: 56.543457}
-    - name: ingredientsSheet_2
+      - - {x: 49.93921, y: 50.543457}
+        - {x: 35.93921, y: 56.543457}
+        - {x: -32.06079, y: 56.543457}
+        - {x: -50.06079, y: 38.543457}
+        - {x: -54.06079, y: 7.543457}
+        - {x: -54.06079, y: -55.456543}
+        - {x: 23.939209, y: -55.456543}
+        - {x: 57.93921, y: -12.456543}
+        - {x: 57.93921, y: 20.543457}
+        - {x: 52.93921, y: 19.543457}
+    - name: t1_water
       rect:
         serializedVersion: 2
         x: 1415
@@ -163,7 +165,7 @@ TextureImporter:
         - {x: 39.92929, y: -48.874756}
         - {x: 39.92929, y: 57.125244}
         - {x: 38.92929, y: 58.125244}
-    - name: ingredientsSheet_3
+    - name: t1_one_sock
       rect:
         serializedVersion: 2
         x: 1846
@@ -182,10 +184,10 @@ TextureImporter:
         - {x: 80.32257, y: -58.050903}
         - {x: 80.32257, y: 9.949097}
         - {x: 16.32257, y: 58.949097}
-    - name: ingredientsSheet_4
+    - name: t1_mystery_blood
       rect:
         serializedVersion: 2
-        x: 2618
+        x: 2631
         y: 5971
         width: 319
         height: 476
@@ -193,25 +195,23 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -30.47644, y: 24.496216}
-        - {x: -31.47644, y: 23.496216}
-        - {x: -50.47644, y: -18.503784}
-        - {x: -50.47644, y: -66.503784}
-        - {x: -43.47644, y: -75.503784}
-        - {x: -3.4764404, y: -75.503784}
-        - {x: 9.52356, y: -68.503784}
-        - {x: 9.52356, y: -14.503784}
-        - {x: -13.47644, y: 24.496216}
-      - - {x: -31.47644, y: 27.496216}
-        - {x: 13.52356, y: 2.4962158}
-        - {x: 39.52356, y: 2.4962158}
-        - {x: 40.52356, y: 3.4962158}
-        - {x: 40.52356, y: 20.496216}
-        - {x: 25.52356, y: 74.496216}
-        - {x: 19.52356, y: 76.496216}
-        - {x: -27.47644, y: 76.496216}
-        - {x: -31.47644, y: 69.496216}
-    - name: ingredientsSheet_7
+      - - {x: -44.347412, y: 24.496216}
+        - {x: -50.347412, y: -4.503784}
+        - {x: -50.347412, y: -75.503784}
+        - {x: -7.347412, y: -75.503784}
+        - {x: 5.652588, y: -69.503784}
+        - {x: 5.652588, y: -25.503784}
+        - {x: -16.347412, y: 24.496216}
+      - - {x: -35.347412, y: 27.496216}
+        - {x: 9.652588, y: 2.4962158}
+        - {x: 35.652588, y: 2.4962158}
+        - {x: 36.652588, y: 3.4962158}
+        - {x: 36.652588, y: 20.496216}
+        - {x: 21.652588, y: 74.496216}
+        - {x: 15.652588, y: 76.496216}
+        - {x: -32.347412, y: 76.496216}
+        - {x: -35.347412, y: 70.496216}
+    - name: t1_salt
       rect:
         serializedVersion: 2
         x: 3162
@@ -231,7 +231,7 @@ TextureImporter:
         - {x: 34.30768, y: -50.85608}
         - {x: 34.30768, y: 26.14392}
         - {x: 29.307678, y: 55.14392}
-    - name: ingredientsSheet_8
+    - name: t1_onion
       rect:
         serializedVersion: 2
         x: 3720
@@ -250,7 +250,7 @@ TextureImporter:
         - {x: 62.038452, y: -71.93176}
         - {x: 62.038452, y: 13.068237}
         - {x: 35.038452, y: 83.06824}
-    - name: ingredientsSheet_9
+    - name: t1_duck_Feet
       rect:
         serializedVersion: 2
         x: 4289
@@ -276,7 +276,7 @@ TextureImporter:
         - {x: -78.73694, y: -45.862305}
         - {x: -9.736938, y: -45.862305}
         - {x: -9.736938, y: 59.137695}
-    - name: ingredientsSheet_11
+    - name: t1_toad
       rect:
         serializedVersion: 2
         x: 62
@@ -293,7 +293,7 @@ TextureImporter:
         - {x: 86.69231, y: -54.115356}
         - {x: 86.69231, y: 34.884644}
         - {x: 84.69231, y: 54.884644}
-    - name: ingredientsSheet_13
+    - name: t1_candles
       rect:
         serializedVersion: 2
         x: 718
@@ -319,7 +319,7 @@ TextureImporter:
         - {x: -15.450378, y: -44.89209}
         - {x: -15.450378, y: 36.10791}
         - {x: -33.45038, y: 49.10791}
-    - name: ingredientsSheet_14
+    - name: t2_eye_of_newt
       rect:
         serializedVersion: 2
         x: 1327
@@ -351,7 +351,7 @@ TextureImporter:
         - {x: 27.478912, y: 10.451538}
         - {x: 28.478912, y: 14.451538}
         - {x: 28.478912, y: 13.451538}
-    - name: ingredientsSheet_16
+    - name: t2_animal_blood
       rect:
         serializedVersion: 2
         x: 1994
@@ -380,7 +380,7 @@ TextureImporter:
         - {x: 65.33002, y: 3.0483398}
         - {x: 65.33002, y: 56.04834}
         - {x: 50.330017, y: 77.04834}
-    - name: ingredientsSheet_18
+    - name: t2_hemlock
       rect:
         serializedVersion: 2
         x: 2613
@@ -404,7 +404,7 @@ TextureImporter:
         - {x: 45.935486, y: -54.740723}
         - {x: 45.935486, y: 41.259277}
         - {x: 23.935486, y: 62.259277}
-    - name: ingredientsSheet_19
+    - name: t2_sage
       rect:
         serializedVersion: 2
         x: 3098
@@ -422,7 +422,7 @@ TextureImporter:
         - {x: 59.480164, y: -21.81018}
         - {x: 59.480164, y: 54.18982}
         - {x: 41.480164, y: 62.18982}
-    - name: ingredientsSheet_20
+    - name: t2_deathcap
       rect:
         serializedVersion: 2
         x: 3716
@@ -442,7 +442,7 @@ TextureImporter:
         - {x: 43.267944, y: -29.603027}
         - {x: 43.267944, y: 49.396973}
         - {x: 39.267944, y: 54.396973}
-    - name: ingredientsSheet_21
+    - name: t2_lodestone
       rect:
         serializedVersion: 2
         x: 4303
@@ -468,7 +468,7 @@ TextureImporter:
         - {x: 71.70972, y: -36.826294}
         - {x: 71.70972, y: 54.173706}
         - {x: 59.709717, y: 65.173706}
-    - name: ingredientsSheet_27
+    - name: t2_downsing_rod
       rect:
         serializedVersion: 2
         x: 106
@@ -485,7 +485,7 @@ TextureImporter:
         - {x: 37.667492, y: 82.160034}
         - {x: 0.6674919, y: 82.160034}
         - {x: -43.332508, y: 0.16003418}
-    - name: ingredientsSheet_28
+    - name: t2_garlic
       rect:
         serializedVersion: 2
         x: 804
@@ -504,7 +504,7 @@ TextureImporter:
         - {x: 41.86476, y: -44.874756}
         - {x: 41.86476, y: 4.125244}
         - {x: -2.1352386, y: 62.125244}
-    - name: ingredientsSheet_29
+    - name: t2_swamp_gas
       rect:
         serializedVersion: 2
         x: 1279
@@ -540,7 +540,7 @@ TextureImporter:
         - {x: 63.233246, y: 2.8548584}
         - {x: 75.233246, y: 17.854858}
         - {x: 75.233246, y: 68.85486}
-    - name: ingredientsSheet_30
+    - name: t2_sulphur
       rect:
         serializedVersion: 2
         x: 1875
@@ -556,7 +556,7 @@ TextureImporter:
         - {x: 71.03351, y: -53.887085}
         - {x: 71.03351, y: 17.112915}
         - {x: 15.033508, y: 55.112915}
-    - name: ingredientsSheet_31
+    - name: t3_0
       rect:
         serializedVersion: 2
         x: 3150
@@ -576,7 +576,7 @@ TextureImporter:
         - {x: 42.496277, y: -4.839966}
         - {x: 48.496277, y: 11.160034}
         - {x: 48.496277, y: 50.160034}
-    - name: ingredientsSheet_32
+    - name: t3_1
       rect:
         serializedVersion: 2
         x: 3745
@@ -595,7 +595,7 @@ TextureImporter:
         - {x: 35.47888, y: -56.258057}
         - {x: 70.47888, y: -40.258057}
         - {x: 70.47888, y: 12.741943}
-    - name: ingredientsSheet_33
+    - name: t3_2
       rect:
         serializedVersion: 2
         x: 4415
@@ -622,7 +622,7 @@ TextureImporter:
         - {x: 56.282837, y: 12.483887}
         - {x: 56.282837, y: 74.48389}
         - {x: 53.282837, y: 78.48389}
-    - name: ingredientsSheet_38
+    - name: t3_3
       rect:
         serializedVersion: 2
         x: 764
@@ -644,7 +644,7 @@ TextureImporter:
         - {x: 20.66005, y: 62.494995}
         - {x: -4.3399506, y: 62.494995}
         - {x: -20.33995, y: 50.494995}
-    - name: ingredientsSheet_39
+    - name: t3_4
       rect:
         serializedVersion: 2
         x: 1289
@@ -663,7 +663,7 @@ TextureImporter:
         - {x: 26.909424, y: -35.48633}
         - {x: 70.909424, y: 13.513672}
         - {x: 70.909424, y: 73.51367}
-    - name: ingredientsSheet_40
+    - name: t3_5
       rect:
         serializedVersion: 2
         x: 1859
@@ -682,7 +682,7 @@ TextureImporter:
         - {x: 62.9516, y: -88.60913}
         - {x: 62.9516, y: 73.39087}
         - {x: 59.9516, y: 92.39087}
-    - name: ingredientsSheet_41
+    - name: t3_6
       rect:
         serializedVersion: 2
         x: 2523
@@ -728,7 +728,7 @@ TextureImporter:
         - {x: 32.674927, y: -47.92932}
         - {x: 53.674927, y: 18.070679}
         - {x: 53.674927, y: 58.07068}
-    - name: ingredientsSheet_43
+    - name: t3_7
       rect:
         serializedVersion: 2
         x: 3716
@@ -748,7 +748,7 @@ TextureImporter:
         - {x: 69.267944, y: -36.91687}
         - {x: 69.267944, y: 9.08313}
         - {x: 3.2679443, y: 57.08313}
-    - name: ingredientsSheet_45
+    - name: t3_8
       rect:
         serializedVersion: 2
         x: 4280
@@ -770,7 +770,7 @@ TextureImporter:
         - {x: 86.90442, y: -17.382202}
         - {x: 86.90442, y: 2.6177979}
         - {x: 67.90442, y: 33.617798}
-    - name: ingredientsSheet_46
+    - name: t3_9
       rect:
         serializedVersion: 2
         x: 35
@@ -804,7 +804,7 @@ TextureImporter:
         - {x: 70.61662, y: -46.006226}
         - {x: 70.61662, y: 2.9937744}
         - {x: 56.616623, y: 42.993774}
-    - name: ingredientsSheet_47
+    - name: t4_0
       rect:
         serializedVersion: 2
         x: 770
@@ -824,7 +824,7 @@ TextureImporter:
         - {x: 50.06575, y: 7.588135}
         - {x: 50.06575, y: 44.588135}
         - {x: 40.06575, y: 56.588135}
-    - name: ingredientsSheet_48
+    - name: t4_1
       rect:
         serializedVersion: 2
         x: 1323
@@ -843,7 +843,7 @@ TextureImporter:
         - {x: 41.708435, y: -55.66626}
         - {x: 41.708435, y: 53.33374}
         - {x: 36.708435, y: 62.33374}
-    - name: ingredientsSheet_49
+    - name: t4_2
       rect:
         serializedVersion: 2
         x: 1953
@@ -867,7 +867,7 @@ TextureImporter:
         - {x: 50.80768, y: 19.946655}
         - {x: 64.80768, y: 26.946655}
         - {x: 64.80768, y: 71.946655}
-    - name: ingredientsSheet_51
+    - name: t4_3
       rect:
         serializedVersion: 2
         x: 2495
@@ -889,7 +889,7 @@ TextureImporter:
         - {x: 59.456543, y: -60.85852}
         - {x: 59.456543, y: -44.85852}
         - {x: 50.456543, y: -30.85852}
-    - name: ingredientsSheet_52
+    - name: t4_5
       rect:
         serializedVersion: 2
         x: 3789
@@ -918,7 +918,7 @@ TextureImporter:
         - {x: 66.4541, y: 28.040894}
         - {x: 66.4541, y: 51.040894}
         - {x: 49.4541, y: 70.04089}
-    - name: ingredientsSheet_54
+    - name: t4_6
       rect:
         serializedVersion: 2
         x: 4330
@@ -944,7 +944,7 @@ TextureImporter:
         - {x: 20.7854, y: -38.235718}
         - {x: 59.7854, y: -38.235718}
         - {x: 59.7854, y: 33.764282}
-    - name: ingredientsSheet_60
+    - name: t4_4
       rect:
         serializedVersion: 2
         x: 3036
@@ -986,7 +986,7 @@ TextureImporter:
         - {x: 84.28784, y: -37.374756}
         - {x: 84.28784, y: -33.374756}
         - {x: 82.28784, y: -28.374756}
-    - name: ingredientsSheet_64
+    - name: t4_7
       rect:
         serializedVersion: 2
         x: 194
@@ -1004,7 +1004,7 @@ TextureImporter:
         - {x: 30.617867, y: -68.58563}
         - {x: 30.617867, y: 28.414368}
         - {x: 13.6178665, y: 69.41437}
-    - name: ingredientsSheet_65
+    - name: t4_8
       rect:
         serializedVersion: 2
         x: 716
@@ -1022,7 +1022,7 @@ TextureImporter:
         - {x: 61.914383, y: -18.899536}
         - {x: 61.914383, y: 13.100464}
         - {x: 38.914383, y: 45.100464}
-    - name: ingredientsSheet_66
+    - name: t4_9
       rect:
         serializedVersion: 2
         x: 1384
@@ -1043,7 +1043,7 @@ TextureImporter:
         - {x: 44.58313, y: -49.733276}
         - {x: 44.58313, y: 20.266724}
         - {x: 33.58313, y: 61.266724}
-    - name: ingredientsSheet_67
+    - name: t4_10
       rect:
         serializedVersion: 2
         x: 1853
@@ -1063,7 +1063,7 @@ TextureImporter:
         - {x: 44.5459, y: -72.96649}
         - {x: 48.5459, y: -48.96649}
         - {x: 65.5459, y: -20.966492}
-    - name: ingredientsSheet_68
+    - name: t5_0
       rect:
         serializedVersion: 2
         x: 2564
@@ -1082,7 +1082,7 @@ TextureImporter:
         - {x: 44.372192, y: -48.468994}
         - {x: 44.372192, y: 11.531006}
         - {x: 16.372192, y: 63.531006}
-    - name: ingredientsSheet_69
+    - name: t5_1
       rect:
         serializedVersion: 2
         x: 3072
@@ -1102,7 +1102,7 @@ TextureImporter:
         - {x: 67.222046, y: -22.0943}
         - {x: 67.222046, y: 27.9057}
         - {x: 58.222046, y: 53.9057}
-    - name: ingredientsSheet_72
+    - name: t5_3
       rect:
         serializedVersion: 2
         x: 4315
@@ -1118,7 +1118,7 @@ TextureImporter:
         - {x: 57.02112, y: -77.57318}
         - {x: 58.02112, y: -68.57318}
         - {x: 58.02112, y: 78.42682}
-    - name: ingredientsSheet_73
+    - name: t5_2
       rect:
         serializedVersion: 2
         x: 3688
@@ -1155,7 +1155,7 @@ TextureImporter:
         - {x: 43.874634, y: 26.16626}
         - {x: 64.87463, y: 47.16626}
         - {x: 64.87463, y: 63.16626}
-    - name: ingredientsSheet_75
+    - name: t5_4
       rect:
         serializedVersion: 2
         x: 83
@@ -1175,7 +1175,7 @@ TextureImporter:
         - {x: 54.86228, y: -12.627808}
         - {x: 54.86228, y: 41.372192}
         - {x: 22.862282, y: 65.37219}
-    - name: ingredientsSheet_76
+    - name: t5_5
       rect:
         serializedVersion: 2
         x: 677
@@ -1201,7 +1201,7 @@ TextureImporter:
         - {x: -5.472702, y: -67.73822}
         - {x: -2.472702, y: -60.73822}
         - {x: -2.472702, y: -54.73822}
-    - name: ingredientsSheet_77
+    - name: t5_6
       rect:
         serializedVersion: 2
         x: 1349
@@ -1220,7 +1220,7 @@ TextureImporter:
         - {x: 11.966492, y: 77.52606}
         - {x: -25.033508, y: 77.52606}
         - {x: -27.033508, y: 66.52606}
-    - name: ingredientsSheet_78
+    - name: t5_6_1
       rect:
         serializedVersion: 2
         x: 1550
@@ -1237,7 +1237,7 @@ TextureImporter:
         - {x: 24.307678, y: -77.87964}
         - {x: 24.307678, y: 12.120361}
         - {x: 16.307678, y: 79.12036}
-    - name: ingredientsSheet_79
+    - name: t5_6_2
       rect:
         serializedVersion: 2
         x: 1698
@@ -1257,7 +1257,7 @@ TextureImporter:
         - {x: 20.315125, y: -67.42682}
         - {x: 20.315125, y: 58.57318}
         - {x: 19.315125, y: 66.57318}
-    - name: ingredientsSheet_80
+    - name: t5_7
       rect:
         serializedVersion: 2
         x: 1900
@@ -1278,7 +1278,7 @@ TextureImporter:
         - {x: 57.973938, y: -43.89453}
         - {x: 63.973938, y: -20.894531}
         - {x: 63.973938, y: 56.10547}
-    - name: ingredientsSheet_81
+    - name: t5_8
       rect:
         serializedVersion: 2
         x: 2479
@@ -1301,7 +1301,7 @@ TextureImporter:
         - {x: 67.874695, y: -27.777893}
         - {x: 67.874695, y: 8.222107}
         - {x: 63.874695, y: 16.222107}
-    - name: ingredientsSheet_82
+    - name: t5_9
       rect:
         serializedVersion: 2
         x: 3134
