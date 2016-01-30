@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 9aaf5d6d3c66d2e40a39eaf89fc8a54b
+timeCreated: 1454146349
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Occult_Body_1
+    21300002: Occult_MiddleHorn_1
+    21300004: Occult_LeftArm_1
+    21300006: Occult_RightArm_1
+    21300008: Occult_LeftLeg_1
+    21300010: Occult_RightLeg_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Occult_Body_1
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 276
+        width: 167
+        height: 279
+      alignment: 9
+      pivot: {x: 0.55785537, y: 0.45382625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.16185, y: 152.38248}
+        - {x: -93.16185, y: 149.38248}
+        - {x: -93.16185, y: -64.61752}
+        - {x: -45.16185, y: -103.61752}
+        - {x: 44.83815, y: -126.61752}
+        - {x: 64.83815, y: -126.61752}
+        - {x: 73.83815, y: -87.61752}
+        - {x: 73.83815, y: 118.38248}
+        - {x: 59.83815, y: 152.38248}
+    - name: Occult_MiddleHorn_1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 393
+        width: 348
+        height: 187
+      alignment: 9
+      pivot: {x: 0.47532102, y: 0.14406762}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 125.58829, y: 160.05936}
+        - {x: -22.411713, y: 160.05936}
+        - {x: -161.41171, y: 96.05936}
+        - {x: -132.41171, y: 49.059357}
+        - {x: -123.41171, y: 40.059357}
+        - {x: -165.41171, y: 16.059357}
+        - {x: -165.41171, y: 4.0593567}
+        - {x: -58.411713, y: -24.940643}
+        - {x: -31.411713, y: -26.940643}
+        - {x: 182.58829, y: -26.940643}
+        - {x: 182.58829, y: 75.05936}
+        - {x: 173.58829, y: 90.05936}
+    - name: Occult_LeftArm_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 168
+        width: 72
+        height: 63
+      alignment: 9
+      pivot: {x: 0.85784614, y: 0.8408048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7.764923, y: 10.029297}
+        - {x: -61.764923, y: -21.970703}
+        - {x: -61.764923, y: -43.970703}
+        - {x: -58.764923, y: -52.970703}
+        - {x: -28.764923, y: -52.970703}
+        - {x: 10.235077, y: -15.970703}
+        - {x: 10.235077, y: 10.029297}
+    - name: Occult_RightArm_1
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 162
+        width: 89
+        height: 71
+      alignment: 9
+      pivot: {x: 0.11400887, y: 0.83264524}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.14679, y: 11.882187}
+        - {x: -10.14679, y: -17.117813}
+        - {x: 34.85321, y: -59.117813}
+        - {x: 76.85321, y: -59.117813}
+        - {x: 78.85321, y: -51.117813}
+        - {x: 78.85321, y: -25.117813}
+        - {x: 16.85321, y: 11.882187}
+    - name: Occult_LeftLeg_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 45
+        width: 38
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5000004, y: 0.85348165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.000015, y: 12.0145035}
+        - {x: -19.000015, y: -69.9855}
+        - {x: 1.9999847, y: -69.9855}
+        - {x: 18.999985, y: -6.9854965}
+        - {x: 18.999985, y: 10.0145035}
+        - {x: 14.999985, y: 12.0145035}
+    - name: Occult_RightLeg_1
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 43
+        width: 39
+        height: 86
+      alignment: 9
+      pivot: {x: 0.47247392, y: 0.8620067}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.426483, y: 11.867424}
+        - {x: -18.426483, y: -74.132576}
+        - {x: 2.5735168, y: -74.132576}
+        - {x: 20.573517, y: -15.132576}
+        - {x: 20.573517, y: 11.867424}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
