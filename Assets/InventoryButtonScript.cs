@@ -3,6 +3,9 @@ using System.Collections;
 
 public class InventoryButtonScript : MonoBehaviour {
 
+	public GameObject initialScreen;
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -19,6 +22,7 @@ public class InventoryButtonScript : MonoBehaviour {
 
 	public void MakeVisible () {
 		foreach (Transform t in transform) {
+			initialScreen.SetActive (true);
 			t.gameObject.SetActive (true);
 		}
 	}
@@ -28,4 +32,5 @@ public class InventoryButtonScript : MonoBehaviour {
 			t.gameObject.SetActive (false);
 		}
 	}
+		
 }
