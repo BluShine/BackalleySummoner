@@ -11,6 +11,8 @@ public class ContractBase {
 	//stats
 	//0 - 4 corresponds to strength, cleverness, seduction, deception, occult
 	public List<float> statReqList = new List<float>();
+    public bool accepted;
+    public bool repeatable;
 
 	//sentence is verb + noun + adverb
 	//verb is from top stat, adverb is from 2nd top stat
@@ -18,10 +20,17 @@ public class ContractBase {
 	public string[] nounList = {"president", "pizza guy", "tax collector", "pope", "mayor", "internet shitposter"};
 	public List<string[]> adverbList = new List<string[]>(5);
 
+    public ContractBase()
+    {
+        this.accepted = false;
+    }
+
 	public ContractBase(float difficulty) {
-		distributeStats (difficulty);
+		distributeStats (difficulty); 
 		initWords ();
 		contractName = writeContractTitle ();
+        this.accepted = false;
+        this.repeatable = false;
 	}
 	public ContractBase (int[] statReqs, float[] statDifficulties) {//to initialize a contract with a specific set of stat indices with specific difficulties.  the two arrays match up 1 to 1
 		for(int i = 0; i < statReqs.Length; i++) {//for each index i of stat requirements
@@ -33,7 +42,7 @@ public class ContractBase {
 
 	//initializes the arrays of verbs and adverbs
 	private void initWords () {
-		verbList.Add (new string[] {"kill", "hurt", "maim", "crush", "rough up"});//strength
+		verbList.Add (new string[] {"kill", "hurt", "maim", "crush", "rough up"});//power
 		verbList.Add (new string[] {"fool", "dupe", "trick", "stupify", "mislead"});//cleverness
 		verbList.Add (new string[] {"attract", "allure", "tempt", "maneuver", "lure"});//seduction
 		verbList.Add (new string[] {"lie to", "swindle", "cheat", "dupe", "delude"});//deception
@@ -66,7 +75,7 @@ public class ContractBase {
 	}
 
 	//returns a number between 1 and 0 that represents how well a contract went
-	public float getContractPerformance (DemonBase demon) {
+	public virtual float getContractPerformance (DemonBase demon) {
 		float output = 1F;
 		for(int i = 0; i < statReqList.Count; i++) {
 			float f = statReqList [i];
@@ -79,14 +88,14 @@ public class ContractBase {
 	}
 
 	//returns the time it takes to complete a contract
-	public float getContractCompletionTime (DemonBase demon) {
+	public virtual float getContractCompletionTime (DemonBase demon) {
 		float perf = getContractPerformance (demon);
 		float compTime = perfTimeMult / perf;
 		return compTime;
 	}
 
 	//builds an appropriate title for the contract
-	public string writeContractTitle () {
+	public virtual string writeContractTitle () {
 		List<float> orderedStats = statReqList;
 		orderedStats.Sort ();
 		int maxStat = orderedStats.Count - 1;//first and second most important stats

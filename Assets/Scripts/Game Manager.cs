@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Linq;
 
 public class GameManager : MonoBehaviour {
 	public float hellBucks;//cash dolla
 	public float reputation;//how reputable you are, 0 to 100
+    public static GameManager instance;
 
 	//TODO implement after initial demo
 	public List<DemonBase> availableDemons;
@@ -14,10 +16,12 @@ public class GameManager : MonoBehaviour {
 	//items providing passive upgrades
 	public List<ItemBase> passiveItems;
 
+    public Dictionary<string, int> HeldIngredients;
+
 
 	public float cashInflowMultiplier = 1F;
 
-
+    public ContractBase[] open_contracts;
 	//UI elements that correspond to visible stats
 	public Text cashBox;//Hell Bucks
 	public Text repBox;//Reputation
@@ -25,7 +29,14 @@ public class GameManager : MonoBehaviour {
 
 
 
-	//methods
+    //methods
+    void Start()
+    {
+        open_contracts = new ContractBase[6];
+        HeldIngredients = new Dictionary<string, int>();
+        //open_contracts[5] = new Gather_Contract();
+        instance = this;
+    }
 
 	//updates the UI elements to the proper value
 	public void updateUI () {
@@ -58,4 +69,35 @@ public class GameManager : MonoBehaviour {
 			storedItems.RemoveAt (itemIndex);
 		}
 	}
+    public void GenerateContracts()
+    {
+        System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
+        for(int x = 0; x < 5; x++)
+        {
+            int difficulty = (int)Mathf.Min(5,Mathf.Max(reputation / 20 + rnd.Next(-1, 1), 1));
+            open_contracts[x] = new ContractBase(difficulty);
+        }
+    }
+    public void GiveIngredients(int tier, int num)
+    {
+        int batches = num / 3;
+        var values = System.Enum.GetValues(typeof(Ingredients.bodyParts));
+        System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
+        for(int x = 0; x < batches; x++)
+        {
+            foreach(Ingredients.bodyParts part in values)
+            {
+                HashSet<Ingredients> curr = Recipes.instance.part_ingredient[part];
+                int chk = rnd.Next(0, curr.Count);
+                this.HeldIngredients[curr.ToArray()[chk].GetName()]++;
+            }
+        }
+        num -= (batches * 3);
+        for (int x = 0; x < num; x++)
+        {
+            HashSet<string> curr = Recipes.instance.tier_ingredient[tier];
+            int chk = rnd.Next(0, curr.Count);
+            this.HeldIngredients[curr.ToArray()[chk]]++;
+        }
+    }
 }

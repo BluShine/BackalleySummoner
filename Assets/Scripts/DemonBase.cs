@@ -31,4 +31,8 @@ public class DemonBase : MonoBehaviour {
 			}
 		}
 	}
+    public int GetTier()
+    {
+        return 1;
+    }
 }

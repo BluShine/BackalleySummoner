@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 public class Recipes : MonoBehaviour {
-    Random math = new Random();
-    Dictionary<string, Ingredients> ingredient_stat = new Dictionary<string, Ingredients>();
-    Dictionary<Ingredients.bodyParts, HashSet<Ingredients>> part_ingredient;
-    Dictionary<Ingredients.stats, HashSet<Ingredients>> stat_ingredient;
-    List<HashSet<string>> tier_ingredient;
-	// Use this for initialization
+    public Dictionary<string, Ingredients> ingredient_stat = new Dictionary<string, Ingredients>();
+    public Dictionary<Ingredients.bodyParts, HashSet<Ingredients>> part_ingredient;
+    public Dictionary<Ingredients.stats, HashSet<Ingredients>> stat_ingredient;
+    public List<HashSet<string>> tier_ingredient;
+    // Use this for initialization
+    public static Recipes instance;
 	void Start () {
         System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
         tier_ingredient = new List<HashSet<string>>(5);
@@ -80,6 +80,7 @@ public class Recipes : MonoBehaviour {
                 }
             }
         }
+        instance = this;
     }
 	
 	// Update is called once per frame
