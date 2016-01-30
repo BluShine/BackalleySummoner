@@ -10,11 +10,12 @@ public class PentagramButtonScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+	
 	}
 
 	public void DoStuff() {
 		Debug.Log ("pentagram pressed");
+		PentagramScreenScript script = GetComponent<PentagramScreenScript> ();
+		script.MoveIntoMain ();
 	}
-		
 }
