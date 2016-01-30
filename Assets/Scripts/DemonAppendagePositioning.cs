@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
+[ExecuteInEditMode]
 class DemonAppendagePositioning : MonoBehaviour
 {
    private string[] attributes = new string[] { "Power", "Cleverness", "Seduction", "Deception", "Occult" };
@@ -12,6 +13,11 @@ class DemonAppendagePositioning : MonoBehaviour
    SpriteRenderer[] partSprites;
 
    SpriteRenderer spriteRenderer;
+
+   public bool done = false;
+
+   public int attIndex = 0;
+   public int appIndex = 0;
 
    void Start()
    {
@@ -23,37 +29,49 @@ class DemonAppendagePositioning : MonoBehaviour
          partSprites[i] = partObjects[i].GetComponent<SpriteRenderer>();
       }
       spriteRenderer = GetComponent<SpriteRenderer>();
-      StartCoroutine(partPositioning());
+      //StartCoroutine(partPositioning());
    }
 
    void Update()
    {
-      
+      if(Input.GetKeyDown(KeyCode.Space))
+      {
+         done = true;
+      }
+      if(done)
+      {
+         done = false;
+         appIndex++;
+         if(appIndex >= attributes.Length)
+         {
+            appIndex = 0;
+            attIndex++;
+            if(attIndex >= attributes.Length)
+               attIndex = 0;
+         }
+         loadParts();
+      }
    }
 
-   IEnumerator partPositioning()
+   void Reset()
    {
-      foreach(string bodyAttr in attributes)
+      appIndex = 0;
+      attIndex = 0;
+      loadParts();
+   }
+
+   void loadParts()
+   {
+      string bodyAttr = attributes[attIndex];
+      List<Sprite> bodySprites = new List<Sprite>(Resources.LoadAll<Sprite>("Parts/" + bodyAttr + "_" + tierNum));
+      spriteRenderer.sprite = bodySprites.Find(x => x.name == bodyAttr + "_Body_" + tierNum);
+      string appendAttr = attributes[appIndex];
+      for(int i = 0; i < partNames.Length; i++)
       {
-         // Load Body
-         List<Sprite> bodySprites = new List<Sprite>(Resources.LoadAll<Sprite>("Parts/" + bodyAttr + "_" + tierNum));
-         spriteRenderer.sprite = bodySprites.Find( x => x.name == bodyAttr + "_Body_" + tierNum);
-         Debug.Log(bodyAttr + "_Body_");
-         gameObject.name = bodyAttr;
-         foreach(string appendAttr in attributes)
-         {
-            Debug.Log(appendAttr + "_Appendages_");
-            for(int i = 0; i < partNames.Length; i++)
-            {
-               List<Sprite> appendSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Parts/" + appendAttr + "_" + tierNum));
-               partSprites[i].sprite = appendSprites.Find(x => x.name == appendAttr + "_" + partNames[i] + "_" + tierNum);
-               Debug.Log(appendAttr + "_" + partNames[i] + "_" + tierNum);
-            }
-            while(!Input.GetKeyDown(KeyCode.Space))
-               yield return null;
-            // Save the positions of stuff
-            yield return null;
-         }
+         List<Sprite> appendSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Parts/" + appendAttr + "_" + tierNum));
+         partSprites[i].sprite = appendSprites.Find(x => x.name == appendAttr + "_" + partNames[i] + "_" + tierNum);
+         Debug.Log(appendAttr + "_" + partNames[i] + "_" + tierNum);
       }
+      name = bodyAttr + "_" + appendAttr;
    }
 }
