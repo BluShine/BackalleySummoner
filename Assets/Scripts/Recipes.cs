@@ -9,7 +9,8 @@ public class Recipes : MonoBehaviour {
         System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
         for (int x = 0; x < 5; x++)
         {
-            List<string> ingredient_l = GetIngredientsTier(x);
+			List<string> ingredient_l = null;
+            //List<string> ingredient_l = GetIngredientsTier(x);
             string[] stats = new string[ingredient_l.Count];
             int[] parts_n = new int[5];
             int[] parts_v = { 2, 3, 5 };
