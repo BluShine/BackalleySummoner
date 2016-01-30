@@ -16,4 +16,16 @@ public class InventoryButtonScript : MonoBehaviour {
 	public void DoStuff() {
 		Debug.Log ("inventory pressed");
 	}
+
+	public void MakeVisible () {
+		foreach (Transform t in transform) {
+			t.gameObject.SetActive (true);
+		}
+	}
+
+	public void MakeInvisible () {
+		foreach (Transform t in transform) {
+			t.gameObject.SetActive (false);
+		}
+	}
 }

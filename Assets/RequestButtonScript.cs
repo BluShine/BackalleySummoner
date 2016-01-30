@@ -13,7 +13,15 @@ public class RequestButtonScript : MonoBehaviour {
 	
 	}
 
-	public void DoStuff() {
-		Debug.Log ("requests pressed");
+	public void MakeVisible () {
+		foreach (Transform t in transform) {
+			t.gameObject.SetActive (true);
+		}
+	}
+
+	public void MakeInvisible () {
+		foreach (Transform t in transform) {
+			t.gameObject.SetActive (false);
+		}
 	}
 }
