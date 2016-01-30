@@ -49,11 +49,6 @@ public class Recipes : MonoBehaviour {
                         {
                             ct++;
                         }
-                        string pr = "";
-                        foreach (int elem in parts_n)
-                        {
-                            pr += elem + ", ";
-                        }
                     }
                 }
             }
