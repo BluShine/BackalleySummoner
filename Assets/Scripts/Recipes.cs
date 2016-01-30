@@ -3,25 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 public class Recipes : MonoBehaviour {
     Random math = new Random();
-    Dictionary<string, Ingredients> ingredients = new Dictionary<string, Ingredients>(); 
+    Dictionary<string, Ingredients> ingredient_stat = new Dictionary<string, Ingredients>();
+    Dictionary<Ingredients.bodyParts, HashSet<Ingredients>> part_ingredient;
+    Dictionary<Ingredients.stats, HashSet<Ingredients>> stat_ingredient;
+    List<HashSet<string>> tier_ingredient;
 	// Use this for initialization
 	void Start () {
         System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
-        for (int x = 0; x < 5; x++)
+        tier_ingredient = new List<HashSet<string>>(5);
+        stat_ingredient = new Dictionary<Ingredients.stats, HashSet<Ingredients>>();
+        part_ingredient = new Dictionary<Ingredients.bodyParts, HashSet<Ingredients>>();
+        for (int x = 0; x < tier_ingredient.Count; x++)
         {
             List<string> ingredient_l = GetIngredientsTier(x);
             string[] stats = new string[ingredient_l.Count];
             int[] parts_n = new int[5];
             int[] parts_v = { 2, 3, 5 };
-            for (int y = 0; y < 10; y++)
+            for (int y = 0; y < 5; y++)
             {
-                parts_n[y/2] = 1;
-                int chk = rnd.Next(0, ingredient_l.Count);
-                stats[y] = ingredient_l[chk];
-                ingredient_l.RemoveAt(chk);
+                parts_n[y] = 1;
+                stat_ingredient.Add((Ingredients.stats)y, new HashSet<Ingredients>());
+                for (int z = 0; z < 2; z++)
+                {
+                    int chk = rnd.Next(0, ingredient_l.Count);
+                    stats[y*2+z] = ingredient_l[chk];
+                    ingredient_l.RemoveAt(chk);
+                }
+                
             }
             for (int y = 0; y < 3; y++)
             {
+                part_ingredient.Add((Ingredients.bodyParts)parts_v[y],new HashSet<Ingredients>());
                 for (int a = 0; a < 3 || (y >= 2 && a < 4); a++)
                 {
                     int min = parts_n.Min();
@@ -58,7 +70,10 @@ public class Recipes : MonoBehaviour {
                 {
                     if(parts_n[y/2] % prime == 0)
                     {
-                        ingredients.Add(stats[y], new Ingredients(stats[y], y / 2, prime));
+                        Ingredients temp = new Ingredients(stats[y], y / 2, prime, x);
+                        ingredient_stat.Add(stats[y], temp);
+                        stat_ingredient[((Ingredients.stats)(y / 2))].Add(temp);
+                        part_ingredient[((Ingredients.bodyParts)prime)].Add(temp);
                         parts_n[y / 2] /= prime;
                         break;
                     }
@@ -75,5 +90,12 @@ public class Recipes : MonoBehaviour {
     // Asssign recipes at start of game
     void Assign () {
 
+    }
+    List<string> GetIngredientsTier(int x)
+    {
+        if(!tier_ingredient[x].Any())
+        {
+        }
+        return this.tier_ingredient[x].ToList();
     }
 }

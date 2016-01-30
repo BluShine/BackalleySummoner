@@ -7,6 +7,7 @@ public class Ingredients {
     stats stat;
     string i_name;
     bodyParts part;
+    int tier;
     public stats GetStat()
     {
         return this.stat;
@@ -15,11 +16,12 @@ public class Ingredients {
     {
         return this.part;
     }
-    public Ingredients(string name, int stat, int part)
+    public Ingredients(string name, int stat, int part, int tier)
     {
         this.i_name = name;
         this.stat = (stats)stat;
         this.part = (bodyParts)part;
+        this.tier = tier;
     }
     public string ToString()
     { return this.i_name + " " + this.stat + " " + this.part;
