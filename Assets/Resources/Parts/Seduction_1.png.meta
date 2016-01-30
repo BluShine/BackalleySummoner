@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: 391ea093eac4e0d4381ad3243871c260
+timeCreated: 1454146468
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Seduction_Body_1
+    21300002: Seduction_LeftHorn_1
+    21300004: Seduction_RightHorn_1
+    21300006: Seduction_LeftArm_1
+    21300008: Seduction_RightArm_1
+    21300010: Seduction_LeftLeg_1
+    21300012: Seduction_RightLeg_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Seduction_Body_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 323
+        width: 231
+        height: 245
+      alignment: 9
+      pivot: {x: 0.30481142, y: 0.6840348}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 136.58856, y: -49.58853}
+        - {x: 78.58856, y: -53.58853}
+        - {x: 64.58856, y: -85.58853}
+        - {x: 67.58856, y: -123.58853}
+        - {x: 114.58856, y: -139.58853}
+        - {x: 137.58856, y: -114.58853}
+        - {x: 124.58856, y: -74.58853}
+        - {x: 115.58856, y: -67.58853}
+        - {x: 104.58856, y: -67.58853}
+        - {x: 97.58856, y: -71.58853}
+        - {x: 84.58856, y: -95.58853}
+        - {x: 95.58856, y: -69.58853}
+        - {x: 106.58856, y: -66.58853}
+        - {x: 116.58856, y: -66.58853}
+        - {x: 145.58856, y: -86.58853}
+        - {x: 129.58856, y: -147.58853}
+        - {x: 59.588562, y: -144.58853}
+        - {x: 52.588562, y: -60.58853}
+        - {x: 89.58856, y: -44.58853}
+        - {x: 84.58856, y: 54.41147}
+        - {x: 55.588562, y: 73.41147}
+        - {x: 47.588562, y: 77.41147}
+        - {x: -45.411438, y: 77.41147}
+        - {x: -70.41144, y: 55.41147}
+        - {x: -70.41144, y: -69.58853}
+        - {x: 53.588562, y: -167.58853}
+        - {x: 137.58856, y: -167.58853}
+        - {x: 160.58856, y: -143.58853}
+        - {x: 160.58856, y: -75.58853}
+        - {x: 158.58856, y: -69.58853}
+    - name: Seduction_LeftHorn_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 434
+        width: 79
+        height: 141
+      alignment: 9
+      pivot: {x: 0.7038362, y: 0.050789043}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30.603058, y: 133.83875}
+        - {x: -55.603058, y: 133.83875}
+        - {x: -55.603058, y: 43.838745}
+        - {x: -27.603058, y: -7.161255}
+        - {x: 17.396942, y: -7.161255}
+        - {x: 23.396942, y: 12.838745}
+        - {x: 23.396942, y: 93.838745}
+        - {x: -1.6030579, y: 123.838745}
+    - name: Seduction_RightHorn_1
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 432
+        width: 117
+        height: 139
+      alignment: 9
+      pivot: {x: 0.14215428, y: 0.09838867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.63205, y: 59.323975}
+        - {x: -16.63205, y: -13.676025}
+        - {x: 44.36795, y: -13.676025}
+        - {x: 100.36795, y: 13.323975}
+        - {x: 100.36795, y: 125.323975}
+        - {x: 49.36795, y: 125.323975}
+        - {x: -5.6320496, y: 110.323975}
+    - name: Seduction_LeftArm_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 188
+        width: 179
+        height: 68
+      alignment: 9
+      pivot: {x: 0.9677984, y: 0.18425347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -173.23592, y: 55.470764}
+        - {x: -173.23592, y: 38.470764}
+        - {x: -82.235916, y: -12.529236}
+        - {x: -15.235916, y: -12.529236}
+        - {x: 5.764084, y: -8.529236}
+        - {x: 5.764084, y: 9.470764}
+        - {x: -34.235916, y: 55.470764}
+    - name: Seduction_RightArm_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 177
+        width: 245
+        height: 90
+      alignment: 9
+      pivot: {x: 0.031149104, y: 0.23757951}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 56.36847, y: 68.61784}
+        - {x: -7.631531, y: 37.617844}
+        - {x: -7.631531, y: -10.382156}
+        - {x: 42.36847, y: -21.382156}
+        - {x: 80.36847, y: -21.382156}
+        - {x: 80.36847, y: -19.382156}
+        - {x: 237.36847, y: 52.617844}
+        - {x: 237.36847, y: 68.61784}
+    - name: Seduction_LeftLeg_1
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 58
+        width: 37
+        height: 45
+      alignment: 9
+      pivot: {x: 0.47098604, y: 0.7862754}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17.426483, y: 9.617607}
+        - {x: -17.426483, y: -26.382393}
+        - {x: -11.426483, y: -35.382393}
+        - {x: 5.573517, y: -35.382393}
+        - {x: 19.573517, y: -13.382393}
+        - {x: 19.573517, y: 8.617607}
+        - {x: 16.573517, y: 9.617607}
+    - name: Seduction_RightLeg_1
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 58
+        width: 40
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4731613, y: 0.82863355}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.926453, y: 8.396957}
+        - {x: -18.926453, y: -22.603043}
+        - {x: -16.926453, y: -32.603043}
+        - {x: 2.0735474, y: -40.603043}
+        - {x: 19.073547, y: -40.603043}
+        - {x: 21.073547, y: -37.603043}
+        - {x: 21.073547, y: 8.396957}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
