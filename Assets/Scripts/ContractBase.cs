@@ -19,7 +19,7 @@ public class ContractBase {
 	*/
 
 	public ContractBase(float difficulty) {
-		int statCount;
+		int statCount = 0;
 		for (int i = 0; i < 5; i++) {
 			statReqList [i] = Random.value;
 			if(statReqList[i] > 0.5F) {
@@ -40,10 +40,11 @@ public class ContractBase {
 
 	//returns a number between 1 and 0 that represents how well a contract went
 	public float getContractPerformance (DemonBase demon) {
-		
+        return 0;
 	}
 	public float getContractCompletionTime (DemonBase demon) {
 		float perf = getContractPerformance (demon);
 		float compTime = perfTimeMult / perf;
+        return 0;
 	}
 }
