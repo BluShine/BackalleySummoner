@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PentagramScreenScript : MonoBehaviour {
 
+	public GameObject initialScreen;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -15,6 +17,7 @@ public class PentagramScreenScript : MonoBehaviour {
 
 	public void MakeVisible () {
 		foreach (Transform t in transform) {
+			initialScreen.SetActive (true);
 			t.gameObject.SetActive (true);
 		}
 	}
