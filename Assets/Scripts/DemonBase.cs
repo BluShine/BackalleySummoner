@@ -25,9 +25,10 @@ public class DemonBase : MonoBehaviour {
 
 
 	public void applyItemBoosts () {
-		foreach (ItemBase i in itemInventory) {
-			for (int j = 0; j < 5; j++) {
-				statList [j] += i.statList [j];
+        var values = System.Enum.GetValues(typeof(Ingredients.stats));
+        foreach (ItemBase i in itemInventory) {
+			foreach(Ingredients.stats value in values) {
+				statList [(int)value] += i.statList [(int)value];
 			}
 		}
 	}
