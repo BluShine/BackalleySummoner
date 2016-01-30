@@ -13,9 +13,16 @@ public class PentagramScreenScript : MonoBehaviour {
 	
 	}
 
-	public void MoveIntoMain () {
+	public void MakeVisible () {
 		foreach (Transform t in transform) {
 			t.gameObject.SetActive (true);
 		}
 	}
+
+	public void MakeInvisible () {
+		foreach (Transform t in transform) {
+			t.gameObject.SetActive (false);
+		}
+	}
+		
 }

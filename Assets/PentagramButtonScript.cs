@@ -16,6 +16,6 @@ public class PentagramButtonScript : MonoBehaviour {
 	public void DoStuff() {
 		Debug.Log ("pentagram pressed");
 		PentagramScreenScript script = GetComponent<PentagramScreenScript> ();
-		script.MoveIntoMain ();
+		script.MakeVisible ();
 	}
 }
