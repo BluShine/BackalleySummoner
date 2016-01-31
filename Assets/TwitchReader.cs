@@ -11,7 +11,7 @@ public class TwitchReader : MonoBehaviour {
 	void Start () {
         //build list of items
         spawnableIngredients = new List<string>();
-        foreach (string s in Recipes.instance.ingredient_stat.Keys)
+        foreach (string s in Recipes.instance.name_ingredient.Keys)
         {
             spawnableIngredients.Add(s);
         }
