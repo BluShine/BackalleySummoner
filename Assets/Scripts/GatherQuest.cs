@@ -20,6 +20,6 @@ public class GatherQuest : ContractBase {
     }
 
 	public override float getCachedPerformance() {
-		return 10;
+		return -10;
 	}
 }
