@@ -1,0 +1,246 @@
+fileFormatVersion: 2
+guid: d7246e058ad627b44a2ec36a04a498c0
+timeCreated: 1454207871
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Seduction_Body_2
+    21300002: Seduction_LeftHorn_2
+    21300004: Seduction_RightHorn_2
+    21300006: Seduction_LeftArm_2
+    21300008: Seduction_RightArm_2
+    21300010: Seduction_LeftLeg_2
+    21300012: Seduction_RightLeg_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Seduction_Body_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 378
+        width: 180
+        height: 189
+      alignment: 9
+      pivot: {x: 0.48210776, y: 0.60224146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61.220604, y: -95.82364}
+        - {x: 61.220604, y: -98.82364}
+        - {x: 54.220604, y: -106.82364}
+        - {x: 63.220604, y: -90.82364}
+        - {x: 63.220604, y: -77.82364}
+        - {x: 93.220604, y: -25.823639}
+        - {x: 93.220604, y: 61.17636}
+        - {x: 62.220604, y: 75.17636}
+        - {x: -68.779396, y: 75.17636}
+        - {x: -86.779396, y: 37.17636}
+        - {x: -86.779396, y: -44.82364}
+        - {x: -49.779396, y: -75.82364}
+        - {x: 14.220604, y: -113.82364}
+        - {x: 65.220604, y: -113.82364}
+        - {x: 86.220604, y: -96.82364}
+        - {x: 75.220604, y: -92.82364}
+        - {x: 63.220604, y: -90.82364}
+    - name: Seduction_LeftHorn_2
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 520
+        width: 31
+        height: 48
+      alignment: 9
+      pivot: {x: 0.7077814, y: 0.09742101}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61.220604, y: -95.82364}
+        - {x: 61.220604, y: -98.82364}
+        - {x: 54.220604, y: -106.82364}
+        - {x: 63.220604, y: -90.82364}
+        - {x: 63.220604, y: -77.82364}
+        - {x: 93.220604, y: -25.823639}
+        - {x: 93.220604, y: 61.17636}
+        - {x: 62.220604, y: 75.17636}
+        - {x: -68.779396, y: 75.17636}
+        - {x: -86.779396, y: 37.17636}
+        - {x: -86.779396, y: -44.82364}
+        - {x: -49.779396, y: -75.82364}
+        - {x: 14.220604, y: -113.82364}
+        - {x: 65.220604, y: -113.82364}
+        - {x: 86.220604, y: -96.82364}
+        - {x: 75.220604, y: -92.82364}
+        - {x: 63.220604, y: -90.82364}
+        - {x: 61.220604, y: -95.82364}
+        - {x: 61.220604, y: -98.82364}
+        - {x: 54.220604, y: -106.82364}
+        - {x: 63.220604, y: -90.82364}
+        - {x: 63.220604, y: -77.82364}
+        - {x: 93.220604, y: -25.823639}
+        - {x: 93.220604, y: 61.17636}
+        - {x: 62.220604, y: 75.17636}
+        - {x: -68.779396, y: 75.17636}
+        - {x: -86.779396, y: 37.17636}
+        - {x: -86.779396, y: -44.82364}
+        - {x: -49.779396, y: -75.82364}
+        - {x: 14.220604, y: -113.82364}
+        - {x: 65.220604, y: -113.82364}
+        - {x: 86.220604, y: -96.82364}
+        - {x: 75.220604, y: -92.82364}
+        - {x: 63.220604, y: -90.82364}
+      - - {x: 61.220604, y: -95.82364}
+        - {x: 61.220604, y: -98.82364}
+        - {x: 54.220604, y: -106.82364}
+        - {x: 63.220604, y: -90.82364}
+        - {x: 63.220604, y: -77.82364}
+        - {x: 93.220604, y: -25.823639}
+        - {x: 93.220604, y: 61.17636}
+        - {x: 62.220604, y: 75.17636}
+        - {x: -68.779396, y: 75.17636}
+        - {x: -86.779396, y: 37.17636}
+        - {x: -86.779396, y: -44.82364}
+        - {x: -49.779396, y: -75.82364}
+        - {x: 14.220604, y: -113.82364}
+        - {x: 65.220604, y: -113.82364}
+        - {x: 86.220604, y: -96.82364}
+        - {x: 75.220604, y: -92.82364}
+        - {x: 63.220604, y: -90.82364}
+    - name: Seduction_RightHorn_2
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 515
+        width: 34
+        height: 54
+      alignment: 9
+      pivot: {x: 0.27897733, y: 0.1222715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.5147705, y: 47.39734}
+        - {x: -9.4852295, y: 26.397339}
+        - {x: -9.4852295, y: 1.3973389}
+        - {x: -3.4852295, y: -6.602661}
+        - {x: 24.51477, y: -6.602661}
+        - {x: 24.51477, y: 47.39734}
+    - name: Seduction_LeftArm_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 180
+        width: 122
+        height: 185
+      alignment: 9
+      pivot: {x: 0.9311749, y: 0.047373343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -96.60333, y: 176.23593}
+        - {x: -113.60333, y: 161.23593}
+        - {x: -113.60333, y: 36.23593}
+        - {x: -78.60333, y: -8.764069}
+        - {x: 8.3966675, y: -8.764069}
+        - {x: 8.3966675, y: 27.235931}
+        - {x: -71.60333, y: 176.23593}
+    - name: Seduction_RightArm_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 166
+        width: 156
+        height: 222
+      alignment: 9
+      pivot: {x: 0.045811187, y: 0.07445354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 120.853455, y: 205.47131}
+        - {x: -7.1465454, y: 8.471313}
+        - {x: -7.1465454, y: -16.528687}
+        - {x: 107.853455, y: -16.528687}
+        - {x: 114.853455, y: -15.528687}
+        - {x: 148.85345, y: 32.471313}
+        - {x: 148.85345, y: 182.47131}
+        - {x: 144.85345, y: 205.47131}
+    - name: Seduction_LeftLeg_2
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 27
+        width: 35
+        height: 69
+      alignment: 9
+      pivot: {x: 0.837398, y: 0.8422867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29.30893, y: 10.882217}
+        - {x: -29.30893, y: -58.117783}
+        - {x: -14.308929, y: -58.117783}
+        - {x: 5.6910706, y: -32.117783}
+        - {x: 5.6910706, y: 10.882217}
+    - name: Seduction_RightLeg_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 14
+        width: 37
+        height: 75
+      alignment: 9
+      pivot: {x: 0.18084057, y: 0.872159}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.308899, y: -23.411926}
+        - {x: 30.308899, y: -14.411926}
+        - {x: 30.308899, y: 9.588074}
+        - {x: -6.691101, y: 9.588074}
+        - {x: -6.691101, y: -34.411926}
+        - {x: -2.691101, y: -48.411926}
+        - {x: 12.308899, y: -65.41193}
+        - {x: 21.308899, y: -65.41193}
+        - {x: 21.308899, y: -59.411926}
+        - {x: 30.308899, y: -46.411926}
+        - {x: 30.308899, y: -31.411926}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

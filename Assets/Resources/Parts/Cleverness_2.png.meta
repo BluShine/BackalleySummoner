@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: a753703b95459334d9aa66562898e0bd
+timeCreated: 1454203894
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Cleverness_Body_2
+    21300002: Cleverness_LeftArm_2
+    21300004: Cleverness_RightArm_2
+    21300006: Cleverness_MiddleHorn_2
+    21300008: Cleverness_LeftLeg_2
+    21300010: Cleverness_RightLeg_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Cleverness_Body_2
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 327
+        width: 489
+        height: 249
+      alignment: 9
+      pivot: {x: 0.61196405, y: 0.48706558}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2.7495728, y: -65.27933}
+        - {x: -56.250427, y: -16.279327}
+        - {x: -7.2504272, y: 56.720673}
+        - {x: -0.25042725, y: 98.72067}
+        - {x: -39.250427, y: 127.72067}
+        - {x: -186.25043, y: 127.72067}
+        - {x: -266.25043, y: 124.72067}
+        - {x: -299.25043, y: 73.72067}
+        - {x: -299.25043, y: 33.720673}
+        - {x: -139.25043, y: -40.279327}
+        - {x: -98.25043, y: -121.27933}
+        - {x: 68.74957, y: -121.27933}
+        - {x: 155.74957, y: -69.27933}
+        - {x: 189.74957, y: 29.720673}
+        - {x: 189.74957, y: 61.720673}
+    - name: Cleverness_LeftArm_2
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 198
+        width: 143
+        height: 55
+      alignment: 9
+      pivot: {x: 0.9354209, y: 0.73422605}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -133.76518, y: 14.617569}
+        - {x: -133.76518, y: -40.38243}
+        - {x: 4.2348175, y: -40.38243}
+        - {x: 9.2348175, y: -24.382431}
+        - {x: 9.2348175, y: 14.617569}
+    - name: Cleverness_RightArm_2
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 175
+        width: 123
+        height: 105
+      alignment: 9
+      pivot: {x: 0.07233088, y: 0.24439552}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -8.896698, y: 23.33847}
+        - {x: -8.896698, y: -13.66153}
+        - {x: 2.103302, y: -25.66153}
+        - {x: 66.1033, y: -25.66153}
+        - {x: 114.1033, y: 2.3384705}
+        - {x: 114.1033, y: 79.33847}
+        - {x: 76.1033, y: 79.33847}
+        - {x: 33.103302, y: 56.33847}
+    - name: Cleverness_MiddleHorn_2
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 105
+        width: 229
+        height: 156
+      alignment: 9
+      pivot: {x: 0.049958076, y: 0.08710079}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 217.5596, y: 84.41228}
+        - {x: 217.5596, y: 94.41228}
+        - {x: 216.5596, y: 94.41228}
+        - {x: 197.5596, y: 142.41228}
+        - {x: 103.5596, y: 142.41228}
+        - {x: 88.5596, y: 141.41228}
+        - {x: -11.440399, y: 22.412277}
+        - {x: -11.440399, y: -10.587723}
+        - {x: -10.440399, y: -13.587723}
+        - {x: 138.5596, y: -13.587723}
+        - {x: 192.5596, y: 15.412277}
+        - {x: 180.5596, y: 19.412277}
+        - {x: 176.5596, y: 19.412277}
+    - name: Cleverness_LeftLeg_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 36
+        width: 100
+        height: 71
+      alignment: 9
+      pivot: {x: 0.9294151, y: 0.8024044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18.941513, y: 14.029289}
+        - {x: -92.94151, y: -11.970711}
+        - {x: -92.94151, y: -35.97071}
+        - {x: -91.94151, y: -37.97071}
+        - {x: -86.94151, y: -41.97071}
+        - {x: -83.94151, y: -40.97071}
+        - {x: -79.94151, y: -47.97071}
+        - {x: -68.94151, y: -56.97071}
+        - {x: 6.058487, y: -56.97071}
+        - {x: 7.058487, y: -54.97071}
+        - {x: 7.058487, y: 14.029289}
+    - name: Cleverness_RightLeg_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 28
+        width: 101
+        height: 87
+      alignment: 9
+      pivot: {x: 0.13861114, y: 0.80848694}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 55.000275, y: -68.33836}
+        - {x: 60.000275, y: -70.33836}
+        - {x: 64.000275, y: -70.33836}
+        - {x: 87.000275, y: -61.338364}
+        - {x: 87.000275, y: -22.338364}
+        - {x: 79.000275, y: 5.6616364}
+        - {x: 33.000275, y: 16.661636}
+        - {x: -13.999725, y: 16.661636}
+        - {x: -13.999725, y: -63.338364}
+        - {x: 13.000275, y: -70.33836}
+        - {x: 51.000275, y: -70.33836}
+        - {x: 54.000275, y: -65.33836}
+        - {x: 57.000275, y: -62.338364}
+        - {x: 56.000275, y: -61.338364}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

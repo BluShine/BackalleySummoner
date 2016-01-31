@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 679482b072f26284e86173735534fb32
+timeCreated: 1454204190
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Occult_Body_2
+    21300002: Occult_MiddleHorn_2
+    21300004: Occult_LeftArm_2
+    21300006: Occult_RightArm_2
+    21300008: Occult_LeftLeg_2
+    21300010: Occult_RightLeg_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Occult_Body_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 233
+        width: 220
+        height: 342
+      alignment: 9
+      pivot: {x: 0.33896938, y: 0.5282509}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 70.426735, y: 132.3382}
+        - {x: 30.426735, y: 161.3382}
+        - {x: -31.573265, y: 161.3382}
+        - {x: -43.573265, y: 154.3382}
+        - {x: -66.573265, y: 127.338196}
+        - {x: -74.573265, y: -59.661804}
+        - {x: -74.573265, y: -102.661804}
+        - {x: -53.573265, y: -159.6618}
+        - {x: 34.426735, y: -161.6618}
+        - {x: 48.426735, y: -96.661804}
+        - {x: 47.426735, y: -87.661804}
+        - {x: 113.426735, y: -180.6618}
+        - {x: 124.426735, y: -180.6618}
+        - {x: 145.42673, y: -89.661804}
+        - {x: 145.42673, y: -68.661804}
+        - {x: 142.42673, y: -69.661804}
+    - name: Occult_MiddleHorn_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 429
+        width: 303
+        height: 153
+      alignment: 9
+      pivot: {x: 0.46811277, y: 0.057954874}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 161.16183, y: 71.132904}
+        - {x: 161.16183, y: 144.1329}
+        - {x: -90.838165, y: 144.1329}
+        - {x: -138.83817, y: 106.132904}
+        - {x: -119.838165, y: 58.132904}
+        - {x: -141.83817, y: 43.132904}
+        - {x: -141.83817, y: 9.132904}
+        - {x: -60.838165, y: -8.867096}
+        - {x: 114.161835, y: -8.867096}
+        - {x: 145.16183, y: -2.867096}
+        - {x: 139.16183, y: 4.132904}
+        - {x: 105.161835, y: 17.132904}
+    - name: Occult_LeftArm_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 139
+        width: 81
+        height: 89
+      alignment: 9
+      pivot: {x: 0.92411363, y: 0.9101151}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.853203, y: 7.999756}
+        - {x: -74.8532, y: -20.000244}
+        - {x: -74.8532, y: -39.000244}
+        - {x: -71.8532, y: -44.000244}
+        - {x: -64.8532, y: -45.000244}
+        - {x: -70.8532, y: -46.000244}
+        - {x: -74.8532, y: -48.000244}
+        - {x: -74.8532, y: -63.000244}
+        - {x: -42.853203, y: -81.000244}
+        - {x: -27.853203, y: -81.000244}
+        - {x: 6.146797, y: -8.000244}
+        - {x: 6.146797, y: 7.999756}
+    - name: Occult_RightArm_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 140
+        width: 73
+        height: 93
+      alignment: 9
+      pivot: {x: 0.058820333, y: 0.93864936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.2938843, y: 5.705612}
+        - {x: -4.2938843, y: -40.294388}
+        - {x: 5.7061157, y: -87.29439}
+        - {x: 34.706116, y: -87.29439}
+        - {x: 68.706116, y: -64.29439}
+        - {x: 68.706116, y: -41.294388}
+        - {x: 10.706116, y: 5.705612}
+    - name: Occult_LeftLeg_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 18
+        width: 71
+        height: 93
+      alignment: 9
+      pivot: {x: 0.9233669, y: 0.9271057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65.55905, y: -34.220833}
+        - {x: -65.55905, y: -61.220833}
+        - {x: -50.55905, y: -86.22083}
+        - {x: -24.559052, y: -86.22083}
+        - {x: 5.4409485, y: -31.220833}
+        - {x: 5.4409485, y: 4.779167}
+        - {x: 2.4409485, y: 6.779167}
+        - {x: -4.5590515, y: 6.779167}
+        - {x: -11.5590515, y: -1.2208328}
+    - name: Occult_RightLeg_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 18
+        width: 70
+        height: 93
+      alignment: 9
+      pivot: {x: 0.070585415, y: 0.9617356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 7.059021, y: 3.5585861}
+        - {x: -4.940979, y: 3.5585861}
+        - {x: -4.940979, y: -13.441414}
+        - {x: 25.059021, y: -89.441414}
+        - {x: 32.05902, y: -89.441414}
+        - {x: 65.05902, y: -56.441414}
+        - {x: 65.05902, y: -51.441414}
+        - {x: 57.05902, y: -51.441414}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
