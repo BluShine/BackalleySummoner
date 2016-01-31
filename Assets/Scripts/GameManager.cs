@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour {
 			il.Add (Recipes.instance.name_ingredient[j]);
 		}
 
-		ItemPopup.Popup (il);
+		//ItemPopup.Popup (il);
 		IngredientUI.UpdateAllNumbers ();
 	}
 
