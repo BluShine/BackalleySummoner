@@ -69,7 +69,7 @@ class DemonAppendagePositioning : MonoBehaviour
    {
       appIndex = 0;
       attIndex = 0;
-      bigassprefab = GameObject.Find("bigprefab").GetComponent<DemonMapper>();
+      //bigassprefab = GameObject.Find("bigprefab").GetComponent<DemonMapper>();
       loadParts();
    }
 
@@ -93,6 +93,7 @@ class DemonAppendagePositioning : MonoBehaviour
    [ContextMenu("Load From Prefab")]
    bool loadFromPrefab()
    {
+      if(!bigassprefab) return false;
       Transform pre = bigassprefab.transform.FindChild(attributes[attIndex] + "_" + attributes[appIndex]);
       if(!pre) return false;
       string appendAttr = attributes[appIndex];
