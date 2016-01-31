@@ -75,6 +75,7 @@ public class PentaItemPlacer : MonoBehaviour {
 
    public void DismissDemon()
     {
+       dismissButton.interactable = false;
        StartCoroutine(demonFliesAway());
     }
 
@@ -89,6 +90,7 @@ public class PentaItemPlacer : MonoBehaviour {
       }
       backButton.gameObject.SetActive(true);
       submitButton.gameObject.SetActive(true);
+      dismissButton.interactable = true;
       dismissButton.gameObject.SetActive(false);
       GameManager.instance.assignDemon(summonedDemon);
    }

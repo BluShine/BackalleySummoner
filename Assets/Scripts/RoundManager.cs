@@ -66,4 +66,13 @@ public class RoundManager : MonoBehaviour {
 		Text moneyText = over.transform.FindChild ("Money").GetComponent<Text> ();
 		moneyText.text = (gameRunner.hellBucks - tempMon).ToString();
 	}
+
+   public void RefreshContractUI()
+   {
+      for(int i = 0; i < contractDisplays.Length; i++)
+      {
+         ContractBase contract = gameRunner.open_contracts[i];
+         contractDisplays[i].gameObject.SetActive(!contract.accepted);
+      }
+   }
 }
