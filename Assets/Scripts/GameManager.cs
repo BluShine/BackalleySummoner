@@ -91,7 +91,10 @@ public class GameManager : MonoBehaviour {
 		{
 			foreach(Ingredients.bodyParts part in values)
 			{
-				HashSet<Ingredients> curr = Recipes.instance.part_ingredient[part];
+				HashSet<Ingredients> curr = new HashSet<Ingredients>(Recipes.instance.part_ingredient[part].Where(
+                    elem => Recipes.instance.tier_ingredient[tier].
+                    Contains(elem))
+                    .ToList());
 				int chk = rnd.Next(0, curr.Count);
 				this.HeldIngredients[curr.ToArray()[chk].GetName()]++;
 			}
@@ -99,7 +102,7 @@ public class GameManager : MonoBehaviour {
 		num -= (batches * 3);
 		for (int x = 0; x < num; x++)
 		{
-			HashSet<GameObject> curr = Recipes.instance.tier_ingredient[tier];
+			HashSet<GameObject> curr = Recipes.instance.tier_GmO[tier];
 			int chk = rnd.Next(0, curr.Count);
 			this.HeldIngredients[curr.ToArray()[chk].name]++;
 		}

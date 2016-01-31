@@ -23,7 +23,11 @@ public class Ingredients {
     }
     public int GetTier()
     {
-        return this.tier;
+        return this.tier;   
+    }
+    public GameObject GetGmO()
+    {
+        return this.GmO;
     }
     public Ingredients(string name, int stat, int part, int tier, GameObject GmO)
     {
