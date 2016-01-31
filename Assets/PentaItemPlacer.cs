@@ -30,6 +30,8 @@ public class PentaItemPlacer : MonoBehaviour {
 	
 	public void PlaceItem(GameObject item)
     {
+        if (GameManager.instance.HeldIngredients[item.name] < 1)
+            return;
         Ingredients ingrererererererererrentttt = Recipes.instance.name_ingredient[item.name];
         int index = 0;
         switch (ingrererererererererrentttt.GetPart())
@@ -61,10 +63,12 @@ public class PentaItemPlacer : MonoBehaviour {
         {
             if (ingred == null)
                 return;
+            else
+                GameManager.instance.HeldIngredients[ingred.GetName()]--;
         }
+        IngredientUI.UpdateAllNumbers();
 
 		GameManager.instance.assignDemon(DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]));
-        Debug.Log((DemonFactory.Instance == null).ToString() + "is null?");
         DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]);
     }
 }
