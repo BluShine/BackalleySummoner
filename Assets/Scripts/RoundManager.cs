@@ -9,8 +9,8 @@ public class RoundManager : MonoBehaviour {
 	public List<ContractBase> completedContracts;
 	public Text[] contractDisplays = new Text[6];
 	void Start () {
-		gameRunner.GenerateContracts ();
-		StartRound ();
+		//gameRunner.GenerateContracts ();
+		//StartRound ();
 	}
 
 	//assigns 5 contracts, cashes intermediate contracts, gives ingredients

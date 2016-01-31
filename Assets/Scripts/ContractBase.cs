@@ -18,7 +18,7 @@ public class ContractBase {
 	//sentence is verb + noun + adverb
 	//verb is from top stat, adverb is from 2nd top stat
 	public List<string[]> verbList = new List<string[]>(5);//no need for spaces at the beginning or ends
-	public string[] nounList = {"president", "pizza guy", "tax collector", "pope", "mayor", "internet shitposter"};
+	public string[] nounList = {"president", "pizza guy", "tax collector", "pope", "mayor", "internet shitposter", "neighbor lady", "math teacher", "principal", "boss", "ceo", "in-laws"};
 	public List<string[]> adverbList = new List<string[]>(5);
 
     public ContractBase()
