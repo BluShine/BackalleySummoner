@@ -1,19 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PentagramScreenScript : MonoBehaviour {
+public class InvenScreenScript : MonoBehaviour {
 
 	public GameObject initialScreen;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	public void MakeVisible () {
 		foreach (Transform t in transform) {
