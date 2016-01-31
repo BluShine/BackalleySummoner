@@ -14,6 +14,8 @@ Summon demons to fulfill requests made by your clients. Requests will appear in 
 
 Gathering ingredients is always the last option in your request notebook. If you need more ingredients you can send a demon to fetch you more at the cost of some of your reputation. You can't be wasting too much time fetching ingredients and ignoring your clients!
 
+When you want to end the round, click the next button in the bottom right corner. Hellbucks and reputation points will be calculated at this point. 
+
 ![image](https://github.com/BluShine/BackalleySummoner/blob/master/Assets/screenshots/requests_ss.png)
 
 To summon demons, click on ingredients in your inventory to put them in the pentagram. 
