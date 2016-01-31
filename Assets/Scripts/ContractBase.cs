@@ -8,6 +8,8 @@ public class ContractBase {
 	public float finalPerf;//how well the contract was completed in the end
 	public float diff;
 	public string contractName;//IMPORTANT: MUST  BE ASSIGNED TO POST POINT DISTRIBUTION
+    public int rewardMoney;
+    static float MONEYCURVE = 1.5f;
 
 	//stats
 	//0 - 4 corresponds to strength, cleverness, seduction, deception, occult
@@ -34,8 +36,8 @@ public class ContractBase {
 		contractName = writeContractTitle ();
         this.accepted = false;
         this.repeatable = false;
-
-	}
+        rewardMoney = 10 * Mathf.FloorToInt(Mathf.Pow(diff, MONEYCURVE));
+    }
 
 	public ContractBase (int[] statReqs, float[] statDifficulties) {//to initialize a contract with a specific set of stat indices with specific difficulties.  the two arrays match up 1 to 1
 		diff = statDifficulties.Sum();
@@ -44,7 +46,8 @@ public class ContractBase {
 		}
 		initWords ();
 		contractName = writeContractTitle ();
-	}
+        rewardMoney = 10 * Mathf.FloorToInt(Mathf.Pow(diff + Random.value * .5f, MONEYCURVE));
+    }
 
 	//initializes the arrays of verbs and adverbs
 	private void initWords () {
@@ -120,7 +123,7 @@ public class ContractBase {
 		noun = nounList [(int)(Random.value * nounList.Length)];
 		adverb = adverbList [secondMaxLoc] [(int)(Random.value * adverbList [secondMaxLoc].Length)];
 
-		return (this.diff + "\t" + verb + " the " + noun + " " + adverb);
+		return (verb + " the " + noun + " " + adverb);
 	}
 
 	// Returns how well you did on the contract the last time you ran it
