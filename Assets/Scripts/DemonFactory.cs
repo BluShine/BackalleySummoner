@@ -22,8 +22,8 @@ public class DemonFactory : MonoBehaviour
    DemonBase last;
    void Update()
    {
-      if(Input.GetKeyDown(KeyCode.Space)) next = true;
-      if(Input.GetKeyDown(KeyCode.Backspace)) prev = true;
+      //if(Input.GetKeyDown(KeyCode.Space)) next = true;
+      //if(Input.GetKeyDown(KeyCode.Backspace)) prev = true;
       if(next)
       {
          if(!Input.GetKey("x")) next = false;
@@ -66,7 +66,12 @@ public class DemonFactory : MonoBehaviour
    public DemonBase makeDemon(Ingredients body, Ingredients limbs, Ingredients horns)
    {
       DemonBase newDemon = makeDemon(body.GetTier(), body.GetStat().ToString(), limbs.GetTier(), limbs.GetStat().ToString(), horns.GetTier(), horns.GetStat().ToString());
-      // Give the demon all the ingredients?  or stats?? or something???
+      float baseStat = (body.GetTier() + limbs.GetTier() + horns.GetTier() + 3) / 6f;
+      float[] newStats = new float[5] { baseStat, baseStat, baseStat, baseStat, baseStat };
+      newStats[(int)body.GetStat()] += body.GetTier() + 1;
+      newStats[(int)limbs.GetStat()] += limbs.GetTier() + 1;
+      newStats[(int)horns.GetStat()] += horns.GetTier() + 1;
+      newDemon.setStats(newStats, Mathf.FloorToInt((body.GetTier() + limbs.GetTier() + horns.GetTier() + 3) / 3f));
       return newDemon;
    }
 
