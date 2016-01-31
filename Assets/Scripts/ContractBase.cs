@@ -92,6 +92,8 @@ public class ContractBase {
 				output *= demon.statList [i] / statReqList [i];
 			}
 		}
+        if (output == 0)
+            output = 0.1f;
 		finalPerf = output;
 		return output;
 	}
@@ -128,6 +130,6 @@ public class ContractBase {
 
 	// Returns how well you did on the contract the last time you ran it
 	public virtual float getCachedPerformance() {
-		return 6.6F / (5F * Mathf.Pow ((diff * Mathf.Log (finalPerf)), (2F / 5)));
+		return 6.6F / (5F * Mathf.Pow ((diff * Mathf.Log (finalPerf)), (2F / 5f)));
 	}
 }
