@@ -31,7 +31,10 @@ public class TwitchReader : MonoBehaviour {
         {
             if(message.Contains(s))
             {
-                Debug.Log("twitch: " + s);
+                if(message.Contains("-"))
+                    GameManager.instance.HeldIngredients[s]--;
+                else
+                    GameManager.instance.HeldIngredients[s]++;
                 return;
             }
         }
