@@ -81,12 +81,18 @@ public class PentaItemPlacer : MonoBehaviour {
 
    IEnumerator demonFliesAway()
    {
-      Vector3 flightPath = Random.insideUnitCircle.normalized;
+      Vector3 flightPath = new Vector3(1, Random.Range(-1f, 1f)).normalized;
+      if(Random.value > 0.5) flightPath *= -1;
+      Vector3 perpPath = (flightPath.x > 0) ? new Vector3(-1 * flightPath.y, flightPath.x) : new Vector3(flightPath.y, -1 * flightPath.x);
       float speed = 5;
-      while(Vector2.Distance(summonedDemon.transform.position, new Vector2(-2.5f, 1)) < 15)
+      Vector3 flightPos = summonedDemon.transform.position;
+      float dist = Vector2.Distance(summonedDemon.transform.position, new Vector2(-2.5f, 1));
+      while(dist  < 15)
       {
-         summonedDemon.transform.position += flightPath * Time.deltaTime * speed;
+         flightPos += flightPath * Time.deltaTime * speed;
+         summonedDemon.transform.position = flightPos + perpPath * Mathf.Abs(Mathf.Sin(dist));
          yield return null;
+         dist = Vector2.Distance(summonedDemon.transform.position, new Vector2(-2.5f, 1));
       }
       backButton.gameObject.SetActive(true);
       submitButton.gameObject.SetActive(true);
