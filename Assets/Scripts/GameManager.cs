@@ -43,8 +43,8 @@ public class GameManager : MonoBehaviour {
 
 	//updates the UI elements to the proper value
 	public void updateUI () {
-		cashBox.text = ((int)hellBucks).ToString ();
-		repBox.text = ((int)reputation).ToString ();
+		cashBox.text = ((int)hellBucks).ToString () + " HELLBUCKS";
+		repBox.text = ((int)reputation).ToString () + " REPUTATION";
 	}
 
 	//adds cash from contract to your cash reserve
