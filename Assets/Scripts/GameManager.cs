@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour {
 	public float cashInflowMultiplier = 1F;
 
 	public ContractBase[] open_contracts;
-	public List<ContractBase> cachedContracts;
+	public List<ContractBase> cachedContracts = new List<ContractBase>(0);
 	//UI elements that correspond to visible stats
 	public Text cashBox;//Hell Bucks
 	public Text repBox;//Reputation
@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour {
 
 	//methods
 	void Start() {
-		Debug.Log ("Game Manager Start");
 		/*Recipes.instance = new Recipes ();
 		Recipes.instance.RecipeStart ();*/
         reputation = 0;
@@ -110,7 +109,6 @@ public class GameManager : MonoBehaviour {
                     Contains(elem))
                     .ToList());
 				int chk = rnd.Next(0, curr.Count);
-				Debug.Log (chk);
 				Ingredients j = curr.ToArray()[chk];
 				this.HeldIngredients[j.GetName()]++;
 				il.Add (j);
@@ -127,15 +125,19 @@ public class GameManager : MonoBehaviour {
 		}
 
 		ItemPopup.Popup (il);
+		IngredientUI.UpdateAllNumbers ();
 	}
 
 
 
 	public GameObject demonScreen;
+	public GameObject requestScreen;
 	ContractBase currentUnassignedContract;
 	//click quest, set it to active if not repeating, go to demon screen
 	public void goToDemonAssignment (int contractIndex) {//call when you click a contract
+		Debug.Log("asssigned");
 		demonScreen.SetActive (true);
+		requestScreen.SetActive (false);
 		currentUnassignedContract = open_contracts[contractIndex];
 	}
 

@@ -16,10 +16,11 @@ public class RoundManager : MonoBehaviour {
 
 	//assigns 5 contracts, cashes intermediate contracts, gives ingredients
 	public void StartRound () {
-		if (roundCount != 0 && gameRunner.cachedContracts.Count > 0)
+		if (roundCount != 0 && gameRunner.cachedContracts.Count > 0) {
 			gameRunner.cashAllContracts ();
-		foreach (Text t in contractDisplays)
-			t.gameObject.SetActive (false);
+			foreach (Text t in contractDisplays)
+				t.gameObject.SetActive (false);
+		}
 		if (GameManager.instance.reputation < 0) {
 			EndStates.Lose (GameManager.instance.hellBucks);
 			return;
@@ -36,11 +37,12 @@ public class RoundManager : MonoBehaviour {
 			gameRunner.cashContract (CB);
 		}
 		gameRunner.GenerateContracts();
-		gameRunner.GiveIngredients(1, 8);
+		gameRunner.GiveIngredients(0, 8);
 		for(int i = 0; i < contractDisplays.Length; i++) {
 			contractDisplays [i].text = gameRunner.open_contracts [i].writeContractTitle();
 		}
 		gameRunner.updateUI ();
+		IngredientUI.UpdateAllNumbers ();
 		roundCount++;
 	}
 }
