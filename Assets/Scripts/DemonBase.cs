@@ -11,6 +11,9 @@ public class DemonBase : MonoBehaviour {
    // demon tier
    public int tier;
 
+   // particles for spawn animation
+   public GameObject ParticleInstance;
+
 	//all items held by the demon
 	public List<ItemBase> itemInventory;
 
@@ -63,6 +66,10 @@ public class DemonBase : MonoBehaviour {
 
     IEnumerator DemonDisplay()
     {
+       if(ParticleInstance)
+       {
+          ParticleInstance.transform.position = this.transform.position;
+       }
        transform.localScale = Vector3.zero;
        for(float i = 0; i < 2; i += Time.deltaTime)
        {

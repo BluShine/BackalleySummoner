@@ -6,6 +6,7 @@ public class DemonFactory : MonoBehaviour
 {
    public static DemonFactory Instance;
    public GameObject[] DemonTierPrefabs;
+   public GameObject ParticlePrefab;
 
 
    private string[] limbNames = new string[] { "LeftArm", "RightArm", "LeftLeg", "RightLeg" };
@@ -34,14 +35,14 @@ public class DemonFactory : MonoBehaviour
             vals[0]++;
             for(int i = 0; i < 4; i++)
             {
-               if(vals[i] >= ((i % 2 == 0) ? 4 : 5))
+               if(vals[i] >= 5)
                {
                   vals[i] = 0;
                   if(i < 3)
                      vals[i + 1]++;
                }
             }
-         } while((vals[2] != 3) == (vals[0] != 3));
+         } while((vals[2] != 4) == (vals[0] != 4));
          last = makeDemon(vals[2], ((Ingredients.stats)vals[3]).ToString(), vals[0], ((Ingredients.stats)vals[1]).ToString(), vals[0], ((Ingredients.stats)vals[1]).ToString());
       }
       else if(prev)
@@ -54,7 +55,7 @@ public class DemonFactory : MonoBehaviour
          {
             if(vals[i] < 0)
             {
-               vals[i] = ((i % 2 == 0) ? 3 : 4);
+               vals[i] = 4;
                if(i < 3)
                   vals[i + 1]--;
             }
@@ -72,12 +73,14 @@ public class DemonFactory : MonoBehaviour
       newStats[(int)limbs.GetStat()] += limbs.GetTier() + 1;
       newStats[(int)horns.GetStat()] += horns.GetTier() + 1;
       newDemon.setStats(newStats, Mathf.FloorToInt((body.GetTier() + limbs.GetTier() + horns.GetTier() + 3) / 3f));
+      if(ParticlePrefab) newDemon.ParticleInstance = Instantiate(ParticlePrefab);
       return newDemon;
    }
 
    public DemonBase makeDemon(int bodyTier, string bodyStat, int limbTier, string limbStat, int hornTier, string hornStat)
    {
       GameObject newDemon = new GameObject();
+      newDemon.name = bodyStat + "_" + limbStat + "_" + hornStat;
       newDemon.transform.position = Vector3.zero;
       SpriteRenderer bodySprite = newDemon.AddComponent<SpriteRenderer>();
       List<Sprite> attrSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Parts/" + bodyStat + "_" + (bodyTier + 1)));

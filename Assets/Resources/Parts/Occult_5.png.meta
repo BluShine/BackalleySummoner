@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: c232abc4292424446bea90f6576789f2
+timeCreated: 1454240393
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Occult_Body_5
+    21300002: Occult_MiddleHorn_5
+    21300004: Occult_LeftArm_5
+    21300006: Occult_RightArm_5
+    21300008: Occult_LeftLeg_5
+    21300010: Occult_RightLeg_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Occult_Body_5
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 281
+        width: 300
+        height: 305
+      alignment: 9
+      pivot: {x: 0.41411707, y: 0.55279684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 31.764877, y: 136.39697}
+        - {x: -6.2351227, y: 136.39697}
+        - {x: -56.235123, y: 94.39697}
+        - {x: -107.23512, y: 39.396973}
+        - {x: -108.23512, y: 36.396973}
+        - {x: -103.23512, y: 33.396973}
+        - {x: -74.23512, y: 9.396973}
+        - {x: -60.235123, y: 9.396973}
+        - {x: -55.235123, y: 10.396973}
+        - {x: -63.235123, y: 9.396973}
+        - {x: -82.23512, y: 9.396973}
+        - {x: -124.23512, y: -5.6030273}
+        - {x: -124.23512, y: -77.60303}
+        - {x: 83.76488, y: -168.60303}
+        - {x: 152.76488, y: -168.60303}
+        - {x: 175.76488, y: -151.60303}
+        - {x: 175.76488, y: -52.603027}
+        - {x: 155.76488, y: 5.3969727}
+    - name: Occult_MiddleHorn_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 353
+        width: 271
+        height: 236
+      alignment: 9
+      pivot: {x: 0.44850197, y: 0.045111187}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 104.45596, y: 225.35376}
+        - {x: 76.45596, y: 176.35376}
+        - {x: 67.45596, y: 149.35376}
+        - {x: 55.455963, y: 145.35376}
+        - {x: 85.45596, y: 205.35376}
+        - {x: 90.45596, y: 225.35376}
+        - {x: -30.544037, y: 225.35376}
+        - {x: -36.544037, y: 224.35376}
+        - {x: -46.544037, y: 221.35376}
+        - {x: -77.54404, y: 209.35376}
+        - {x: -118.54404, y: 177.35376}
+        - {x: -121.54404, y: 152.35376}
+        - {x: -121.54404, y: 42.35376}
+        - {x: -76.54404, y: -10.64624}
+        - {x: 75.45596, y: -10.64624}
+        - {x: 149.45596, y: 23.35376}
+        - {x: 149.45596, y: 192.35376}
+        - {x: 144.45596, y: 225.35376}
+    - name: Occult_LeftArm_5
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 181
+        width: 96
+        height: 82
+      alignment: 9
+      pivot: {x: 0.8354805, y: 0.6963786}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38.20613, y: -47.103043}
+        - {x: -22.206131, y: -48.103043}
+        - {x: 15.793869, y: -6.1030426}
+        - {x: 15.793869, y: 24.896957}
+        - {x: -23.206131, y: 24.896957}
+        - {x: -72.20613, y: 14.896957}
+        - {x: -80.20613, y: 1.8969574}
+        - {x: -80.20613, y: -38.103043}
+        - {x: -79.20613, y: -41.103043}
+        - {x: -75.20613, y: -35.103043}
+        - {x: -75.20613, y: -29.103043}
+        - {x: -75.20613, y: -49.103043}
+        - {x: -74.20613, y: -53.103043}
+        - {x: -72.20613, y: -57.103043}
+        - {x: -42.20613, y: -57.103043}
+        - {x: -47.20613, y: -34.103043}
+        - {x: -43.20613, y: -41.103043}
+    - name: Occult_RightArm_5
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 197
+        width: 97
+        height: 63
+      alignment: 9
+      pivot: {x: 0.19011287, y: 0.6533622}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53.55905, y: -3.1618195}
+        - {x: 51.55905, y: -3.1618195}
+        - {x: 57.55905, y: -4.1618195}
+        - {x: 60.55905, y: -7.1618195}
+        - {x: 76.55905, y: -40.16182}
+        - {x: 78.55905, y: -38.16182}
+        - {x: 78.55905, y: 21.83818}
+        - {x: -18.440948, y: 21.83818}
+        - {x: -18.440948, y: -6.1618195}
+        - {x: 17.559052, y: -33.16182}
+        - {x: 37.55905, y: -36.16182}
+        - {x: 43.55905, y: -32.16182}
+        - {x: 47.55905, y: -28.16182}
+        - {x: 46.55905, y: -25.16182}
+        - {x: 53.55905, y: -18.16182}
+        - {x: 51.55905, y: -41.16182}
+        - {x: 60.55905, y: -41.16182}
+        - {x: 66.55905, y: -32.16182}
+        - {x: 63.55905, y: -14.161819}
+        - {x: 57.55905, y: -5.1618195}
+    - name: Occult_LeftLeg_5
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 43
+        width: 72
+        height: 113
+      alignment: 9
+      pivot: {x: 0.85784596, y: 0.7280076}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22.764908, y: 30.735138}
+        - {x: -61.764908, y: -26.264862}
+        - {x: -61.764908, y: -70.26486}
+        - {x: -44.764908, y: -82.26486}
+        - {x: -16.764908, y: -82.26486}
+        - {x: 10.235092, y: -65.26486}
+        - {x: 10.235092, y: 26.735138}
+        - {x: 3.2350922, y: 30.735138}
+    - name: Occult_RightLeg_5
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 36
+        width: 66
+        height: 114
+      alignment: 9
+      pivot: {x: 0.14215435, y: 0.7730925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16.617813, y: 25.867455}
+        - {x: -5.382187, y: 25.867455}
+        - {x: -9.382187, y: 18.867455}
+        - {x: -9.382187, y: -50.132545}
+        - {x: 1.6178131, y: -62.132545}
+        - {x: 7.617813, y: -58.132545}
+        - {x: 6.617813, y: -55.132545}
+        - {x: 18.617813, y: -56.132545}
+        - {x: -5.382187, y: -71.132545}
+        - {x: -6.382187, y: -75.132545}
+        - {x: 10.617813, y: -78.132545}
+        - {x: 16.617813, y: -73.132545}
+        - {x: 26.617813, y: -62.132545}
+        - {x: 12.617813, y: -86.132545}
+        - {x: 13.617813, y: -88.132545}
+        - {x: 26.617813, y: -88.132545}
+        - {x: 52.617813, y: -80.132545}
+        - {x: 56.617813, y: -66.132545}
+        - {x: 56.617813, y: -24.132545}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

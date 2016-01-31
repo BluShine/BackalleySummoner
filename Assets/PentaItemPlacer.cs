@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Linq;
 
 public class PentaItemPlacer : MonoBehaviour {
 
@@ -9,6 +11,9 @@ public class PentaItemPlacer : MonoBehaviour {
     List<Transform> places;
 
     public Ingredients[] currentIngs;
+    public Button backButton, submitButton, dismissButton;
+
+    DemonBase summonedDemon;
 
 	// Use this for initialization
 	void Start () {
@@ -33,19 +38,7 @@ public class PentaItemPlacer : MonoBehaviour {
         if (GameManager.instance.HeldIngredients[item.name] < 1)
             return;
         Ingredients ingrererererererererrentttt = Recipes.instance.name_ingredient[item.name];
-        int index = 0;
-        switch (ingrererererererererrentttt.GetPart())
-        {
-            case Ingredients.bodyParts.Horns:
-                index = 0;
-                break;
-            case Ingredients.bodyParts.Body:
-                index = 1;
-                break;
-            case Ingredients.bodyParts.Limbs:
-                index = 2;
-                break;
-        }
+        int index = partToIndex(ingrererererererererrentttt.GetPart());
         currentIngs[index] = ingrererererererererrentttt;
         foreach (Transform t in places[index])
         {
@@ -61,14 +54,56 @@ public class PentaItemPlacer : MonoBehaviour {
     {
         foreach (Ingredients ingred in currentIngs)
         {
-            if (ingred == null)
-                return;
-            else
-                GameManager.instance.HeldIngredients[ingred.GetName()]--;
+           if(ingred == null)
+              return;
+           else
+           {
+              Destroy(places[partToIndex(ingred.GetPart())].GetChild(0).gameObject);
+              GameManager.instance.HeldIngredients[ingred.GetName()]--;
+           }
         }
         IngredientUI.UpdateAllNumbers();
 
-		GameManager.instance.assignDemon(DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]));
+        summonedDemon = DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]);
+        summonedDemon.transform.position = new Vector3(-2.5f, 1);
         //DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]);
+        backButton.gameObject.SetActive(false);
+        submitButton.gameObject.SetActive(false);
+        dismissButton.gameObject.SetActive(true);
+
+    }
+
+   public void DismissDemon()
+    {
+       StartCoroutine(demonFliesAway());
+    }
+
+   IEnumerator demonFliesAway()
+   {
+      Vector3 flightPath = Random.insideUnitCircle.normalized;
+      float speed = 5;
+      while(Vector2.Distance(summonedDemon.transform.position, new Vector2(-2.5f, 1)) < 15)
+      {
+         summonedDemon.transform.position += flightPath * Time.deltaTime * speed;
+         yield return null;
+      }
+      backButton.gameObject.SetActive(true);
+      submitButton.gameObject.SetActive(true);
+      dismissButton.gameObject.SetActive(false);
+      GameManager.instance.assignDemon(summonedDemon);
+   }
+
+   int partToIndex(Ingredients.bodyParts bp)
+    {
+       switch(bp)
+       {
+          case Ingredients.bodyParts.Horns:
+             return 0;
+          case Ingredients.bodyParts.Body:
+             return 1;
+          case Ingredients.bodyParts.Limbs:
+             return 2;
+       }
+       return -1;
     }
 }

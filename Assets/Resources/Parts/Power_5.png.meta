@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: 2f394e9d6f332e4428347f947c24aec1
+timeCreated: 1454240513
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Power_Body_5
+    21300002: Power_LeftArm_5
+    21300004: Power_RightArm_5
+    21300006: Power_LeftHorn_5
+    21300008: Power_LeftLeg_5
+    21300010: Power_RightLeg_5
+    21300012: Power_RightHorn_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Power_Body_5
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 327
+        width: 458
+        height: 260
+      alignment: 9
+      pivot: {x: 0.50468796, y: 0.43393603}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 161.8529, y: -90.823364}
+        - {x: 224.8529, y: -68.823364}
+        - {x: 226.8529, y: -64.823364}
+        - {x: 226.8529, y: -4.8233643}
+        - {x: 224.8529, y: 2.1766357}
+        - {x: 193.8529, y: 43.176636}
+        - {x: 107.852905, y: 118.176636}
+        - {x: 21.852905, y: 147.17664}
+        - {x: -28.147095, y: 147.17664}
+        - {x: -59.147095, y: 115.176636}
+        - {x: -104.147095, y: 104.176636}
+        - {x: -146.1471, y: 70.176636}
+        - {x: -211.1471, y: 51.176636}
+        - {x: -227.1471, y: 23.176636}
+        - {x: -231.1471, y: 13.176636}
+        - {x: -231.1471, y: -62.823364}
+        - {x: -228.1471, y: -60.823364}
+        - {x: -226.1471, y: -51.823364}
+        - {x: -124.147095, y: -104.823364}
+        - {x: -70.147095, y: -52.823364}
+        - {x: -38.147095, y: -106.823364}
+        - {x: -4.1470947, y: -111.823364}
+        - {x: 16.852905, y: -112.823364}
+        - {x: 91.852905, y: -112.823364}
+        - {x: 93.852905, y: -106.823364}
+        - {x: 70.852905, y: -90.823364}
+        - {x: 129.8529, y: -110.823364}
+    - name: Power_LeftArm_5
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 173
+        width: 98
+        height: 105
+      alignment: 9
+      pivot: {x: 0.90531516, y: 0.8885181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23.720886, y: 11.705597}
+        - {x: -85.72089, y: -53.294403}
+        - {x: -88.72089, y: -58.294403}
+        - {x: -88.72089, y: -88.2944}
+        - {x: -81.72089, y: -93.2944}
+        - {x: -48.720886, y: -93.2944}
+        - {x: 9.279114, y: -31.294403}
+        - {x: 9.279114, y: 11.705597}
+    - name: Power_RightArm_5
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 172
+        width: 95
+        height: 107
+      alignment: 9
+      pivot: {x: 0.08188557, y: 0.8812561}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.220871, y: 12.705597}
+        - {x: -7.779129, y: 12.705597}
+        - {x: -7.779129, y: -34.294403}
+        - {x: 13.220871, y: -73.2944}
+        - {x: 46.22087, y: -94.2944}
+        - {x: 78.22087, y: -94.2944}
+        - {x: 87.22087, y: -82.2944}
+        - {x: 87.22087, y: -62.294403}
+        - {x: 61.22087, y: -30.294403}
+    - name: Power_LeftHorn_5
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 187
+        width: 141
+        height: 78
+      alignment: 9
+      pivot: {x: 0.9187557, y: 0.27978674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -129.54456, y: 56.176636}
+        - {x: -129.54456, y: 20.176636}
+        - {x: -94.544556, y: -21.823364}
+        - {x: 11.455444, y: -21.823364}
+        - {x: 11.455444, y: 35.176636}
+        - {x: 1.4554443, y: 56.176636}
+    - name: Power_LeftLeg_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 47
+        width: 57
+        height: 74
+      alignment: 9
+      pivot: {x: 0.25515828, y: 0.8046522}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.455978, y: 14.455734}
+        - {x: -5.5440216, y: 14.455734}
+        - {x: -14.544022, y: 3.4557343}
+        - {x: -14.544022, y: -56.544266}
+        - {x: -12.544022, y: -59.544266}
+        - {x: 42.45598, y: -59.544266}
+        - {x: 42.45598, y: -21.544266}
+        - {x: 38.45598, y: -5.5442657}
+    - name: Power_RightLeg_5
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 49
+        width: 58
+        height: 74
+      alignment: 9
+      pivot: {x: 0.7776384, y: 0.7611306}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -26.103027, y: 17.676338}
+        - {x: -37.103027, y: -0.3236618}
+        - {x: -45.103027, y: -21.323662}
+        - {x: -45.103027, y: -56.32366}
+        - {x: 9.896973, y: -56.32366}
+        - {x: 12.896973, y: -50.32366}
+        - {x: 12.896973, y: 13.676338}
+        - {x: 1.8969727, y: 17.676338}
+    - name: Power_RightHorn_5
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 93
+        width: 139
+        height: 78
+      alignment: 9
+      pivot: {x: 0.075219244, y: 0.32107702}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 72.544525, y: 52.955994}
+        - {x: 68.544525, y: 48.955994}
+        - {x: 27.544525, y: 46.955994}
+        - {x: 26.544525, y: 43.955994}
+        - {x: -9.455475, y: 11.955994}
+        - {x: -10.455475, y: 8.955994}
+        - {x: -10.455475, y: -25.044006}
+        - {x: 60.544525, y: -25.044006}
+        - {x: 128.54453, y: 4.9559937}
+        - {x: 128.54453, y: 52.955994}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

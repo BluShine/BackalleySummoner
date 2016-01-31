@@ -147,6 +147,8 @@ public class GameManager : MonoBehaviour {
 			cashContract (currentUnassignedContract);
 		}
 		else cacheContract (currentUnassignedContract);
+      // Now that we've checked the demon, we can get rid of it
+      Destroy(demon.gameObject);
 	}
 
 	private void cacheContract (ContractBase contract) {//called after assignDemon

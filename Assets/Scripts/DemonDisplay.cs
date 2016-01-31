@@ -15,7 +15,7 @@ class DemonDisplay : MonoBehaviour
 
    void Update()
    {
-      if(Input.GetKeyDown(KeyCode.C))
+      if(Input.GetKey(KeyCode.C))
       {
          DemonBase d = DemonFactory.Instance.makeDemon(Random.Range(0, 4), attributes[Random.Range(0, 5)], Random.Range(0, 4), attributes[Random.Range(0, 5)], Random.Range(0, 4), attributes[Random.Range(0, 5)]);
          d.transform.position = new Vector3(Random.Range(-6.8f, 6.8f), Random.Range(-5f, 5f), 0);
