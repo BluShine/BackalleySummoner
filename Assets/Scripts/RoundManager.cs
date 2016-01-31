@@ -45,9 +45,25 @@ public class RoundManager : MonoBehaviour {
 			EndStates.Neutral (GameManager.instance.hellBucks);
 			return;
 		}
+		float tempRep = gameRunner.reputation;
+		float tempMon = gameRunner.hellBucks;
 		foreach (ContractBase CB in gameRunner.open_contracts.Where (elem => elem.accepted).ToArray()) {
 			gameRunner.cashContract (CB);
 		}
 		over.SetActive (true);
+
+		Text missionText = over.transform.FindChild ("Missions").GetComponent<Text> ();
+		//open contracts in game manager
+		string newText = "";
+		foreach (ContractBase contract in gameRunner.open_contracts) {
+			newText += contract.contractName.TrimStart(' ', '1', '2' ,'3', '4', '5', '\t') + ": " + ((contract.finalPerf > 1) ? "Success" : "Failure") + "\n";
+		}
+		missionText.text = newText;
+
+		Text repText = over.transform.FindChild ("Rep").GetComponent<Text> ();
+		repText.text = (gameRunner.reputation - tempRep).ToString();
+
+		Text moneyText = over.transform.FindChild ("Money").GetComponent<Text> ();
+		moneyText.text = (gameRunner.hellBucks - tempMon).ToString();
 	}
 }
