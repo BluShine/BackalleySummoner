@@ -21,9 +21,9 @@ public class RoundManager : MonoBehaviour {
             Text t = contractDisplays[i];
             ContractBase c = gameRunner.open_contracts[i];
             t.text = c.contractName;
-            t.transform.Find("Difficulty").GetComponent<Text>().text = c.diff;
+            t.transform.Find("Difficulty").GetComponent<Text>().text = c.diff.ToString();
             t.transform.Find("Money").GetComponent<Text>().text = "$" + c.rewardMoney;
-            t.transform.Find("Reputation").GetComponent<Text>().text = "~" + c.diff;
+            t.transform.Find("Reputation").GetComponent<Text>().text = "~" + c.diff.ToString();
         }
 		gameRunner.updateUI ();
 		IngredientUI.UpdateAllNumbers ();
