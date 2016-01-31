@@ -8,6 +8,7 @@ public class Ingredients {
     string i_name;
     bodyParts part;
     int tier;
+    GameObject GmO;
     public stats GetStat()
     {
         return this.stat;
@@ -20,12 +21,13 @@ public class Ingredients {
     {
         return this.i_name;
     }
-    public Ingredients(string name, int stat, int part, int tier)
+    public Ingredients(string name, int stat, int part, int tier, GameObject GmO)
     {
         this.i_name = name;
         this.stat = (stats)stat;
         this.part = (bodyParts)part;
         this.tier = tier;
+        this.GmO = GmO;
     }
     public string ToString()
     { return this.i_name + " " + this.stat + " " + this.part;
