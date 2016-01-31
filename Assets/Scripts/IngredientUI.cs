@@ -10,9 +10,16 @@ public class IngredientUI : MonoBehaviour {
     List<Transform> buttonLocations;
     public List<List<GameObject>> buttons;
 
+    static List<IngredientUI> instances;
+
     // Use this for initialization
     void Start()
     {
+        instances = new List<IngredientUI>();
+        foreach(IngredientUI ingerdenen in GameObject.FindObjectsOfType<IngredientUI>())
+        {
+            instances.Add(ingerdenen);
+        }
         buttonLocations = new List<Transform>();
         foreach (Transform t in transform)
         {
@@ -87,7 +94,7 @@ public class IngredientUI : MonoBehaviour {
 
     public static void UpdateAllNumbers()
     {
-        foreach(IngredientUI i in GameObject.FindObjectsOfType<IngredientUI>())
+        foreach(IngredientUI i in instances)
         {
             i.UpdateNumbers();
         }

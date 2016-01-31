@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System.Collections.Generic;
 
 public class DemonMapper : MonoBehaviour {
-
-   public GameObject[,] demonMap = new GameObject[5,5];
+#if UNITY_EDITOR
+    public GameObject[,] demonMap = new GameObject[5,5];
 
    public void SavePrefab(int x, int y, GameObject demon)
    {
@@ -18,4 +20,5 @@ public class DemonMapper : MonoBehaviour {
 
       PrefabUtility.ReplacePrefab(gameObject, PrefabUtility.GetPrefabParent(gameObject), ReplacePrefabOptions.ConnectToPrefab);
    }
+#endif
 }

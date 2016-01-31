@@ -48,8 +48,10 @@ class DemonAppendagePositioning : MonoBehaviour
             GameObject nakedDemon = GameObject.Instantiate(gameObject);
             nakedDemon.name = name;
             DestroyImmediate(nakedDemon.GetComponent<DemonAppendagePositioning>());
-            bigassprefab.SavePrefab(appIndex, attIndex, nakedDemon);
-         }
+#if UNITY_EDITOR
+                bigassprefab.SavePrefab(appIndex, attIndex, nakedDemon);
+#endif
+            }
          
 
          done = false;
