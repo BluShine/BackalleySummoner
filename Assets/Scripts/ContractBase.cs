@@ -82,16 +82,23 @@ public class ContractBase {
             "haunt", "resurrect", "summon"});//occult
 
 		adverbList.Add (new string[] {"brutally", "painfully", "maliciously", "cruelly", "inhumanely",
-            "intimidatingly", "masochistically", "viciously", "with a knife", "with a gun"});
+            "intimidatingly", "masochistically", "viciously", "with a knife", "with a gun",
+            "with your bare hands", "forcefully"}); //power
 		adverbList.Add (new string[] {"sneakily", "intelligently", "silently", "dexterously", "adpetly",
             "stealthily", "carefully", "hilariously", "ridiculously", "cunningly",
-            "respectfully"});
+            "respectfully", "keenly", "creatively", "theoretically", "with science"});//cleverness
 		adverbList.Add (new string[] {"charmingly", "elegantly", "swankily", "deftly", "nimbly",
-            "sexily", "adorably"});
+            "sexily", "adorably", "beautifully", "gracefully", "foxily",
+            "stylishly", "with flare", "exquisitely", "fashionably", "handsomely",
+            "luxuriously", "opulently", "delicately", "sumptuously", "daintily",
+            "magestically", "artfully", "with panache" });//seduction
 		adverbList.Add (new string[] {"amorally", "unscrupulously", "unprinciply", "unethically", "slyly",
-            "cunningly"});
+            "cunningly", "dishonestly", "dishonorably", "under the radar", "covertly",
+            "with plausible deniability", "surrepticiously", "secretly", "on the down low", "privately",
+            "off the record", "behind closed doors", "confidentially", "invisibly" }); //deception
 		adverbList.Add (new string[] {"archaically", "arcanely", "magically", "supernaturally", "mystically",
-            "hauntingly", "creepily"});
+            "hauntingly", "creepily", "with magic", "by unknown means", "etherically",
+            "spookily", "unnaturally", "anomalously", "weirdly" }); //occult
 	}
 
 	//distributes the difficulty randomly throughout the different stat requirements
