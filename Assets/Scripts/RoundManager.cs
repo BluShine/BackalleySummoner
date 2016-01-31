@@ -13,6 +13,8 @@ public class RoundManager : MonoBehaviour {
 	public void disableInvScreens () {foreach (GameObject g in disableAfterStart) g.SetActive (false);}
 	public GameObject over;
 
+    public int lastRound = 10;
+
 	//assigns 5 contracts, cashes intermediate contracts, gives ingredients
 	public void StartRound () {
 		gameRunner.GenerateContracts();
@@ -41,11 +43,11 @@ public class RoundManager : MonoBehaviour {
 		if (GameManager.instance.reputation < 0) {
 			EndStates.Lose (GameManager.instance.hellBucks);
 			return;
-		} else if(this.roundCount > 10 && GameManager.instance.hellBucks > 200)
+		} else if(this.roundCount > lastRound && GameManager.instance.hellBucks > 200)
 		{
 			EndStates.Win (GameManager.instance.hellBucks);
 			return;
-		} else if(this.roundCount > 10)
+		} else if(this.roundCount > lastRound)
 		{
 			EndStates.Neutral (GameManager.instance.hellBucks);
 			return;

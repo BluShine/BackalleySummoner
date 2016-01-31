@@ -3,25 +3,35 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class EndStates : MonoBehaviour {
-	// Use this for initialization
-	public static void Win(float p)
+
+    public GameObject win;
+    public GameObject lose;
+    public GameObject neutral;
+
+    static EndStates instance;
+
+    void Start()
+    {
+        instance = this;
+    }
+
+    // Use this for initialization
+    public static void Win(float p)
 	{
-		decimal value = (decimal)p;
-		GameObject.Find("Win").GetComponent<Text>().text = "You got " + value.ToString("C") +" Hellbucks";
-		GameObject.Find ("Win").SetActive (true);
+		instance.win.GetComponentInChildren<Text>().text = "Win!\nYou got " + p +" Hellbucks";
+        instance.win.SetActive (true);
 	}
 
 	public static void Lose(float p)
 	{
-		decimal value = (decimal)p;
-		GameObject.Find("Lose").GetComponent<Text>().text = "You got " + value.ToString("C") +" Hellbucks";
-		GameObject.Find ("Lose").SetActive (true);
+        instance.lose.GetComponentInChildren<Text>().text = "Lose!\nYou got " + p +" Hellbucks";
+		instance.lose.SetActive (true);
 	}
 
 	public static void Neutral(float p)
 	{
-		decimal value = (decimal)p;
-		GameObject.Find("Neutral").GetComponent<Text>().text = "You got " + value.ToString("C") +" Hellbucks";
-		GameObject.Find ("Neutral").SetActive (true);
+        Debug.Log(p);
+        instance.neutral.GetComponentInChildren<Text>().text = "Game Over!\nYou got " + p +" Hellbucks";
+        instance.neutral.SetActive (true);
 	}
 }

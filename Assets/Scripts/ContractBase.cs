@@ -6,7 +6,7 @@ using System.Linq;
 public class ContractBase {
 	public float perfTimeMult = 1F;
 	public float finalPerf;//how well the contract was completed in the end
-	public float diff;
+	public float diff = 0;
 	public string contractName;//IMPORTANT: MUST  BE ASSIGNED TO POST POINT DISTRIBUTION
     public int rewardMoney;
     static float MONEYCURVE = 1.5f;

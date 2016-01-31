@@ -5,8 +5,8 @@ using UnityEngine.UI;
 using System.Linq;
 
 public class GameManager : MonoBehaviour {
-	public float hellBucks;//cash dolla
-	public float reputation;//how reputable you are, 0 to 100
+	public float hellBucks = 0;//cash dolla
+	public float reputation = 10;//how reputable you are, 0 to 100
 	public static GameManager instance;
    public RoundManager roundManager;
 
