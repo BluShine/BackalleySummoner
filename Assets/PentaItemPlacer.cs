@@ -20,7 +20,7 @@ public class PentaItemPlacer : MonoBehaviour {
                 g.GetComponent<Button>().onClick.AddListener(() => PlaceItem(g)); 
             }
         }
-
+        places = new List<Transform>();
         foreach(Transform t in transform)
         {
             places.Add(t);
@@ -36,7 +36,7 @@ public class PentaItemPlacer : MonoBehaviour {
                 currentIngs[0] = ingrererererererererrentttt;
                 foreach(Transform t in places[0])
                 {
-                    Destroy(t);
+                    Destroy(t.gameObject);
                 }
                 GameObject newIngrentetetet = Instantiate(ingrererererererererrentttt.GetGmO());
                 newIngrentetetet.transform.parent = places[0];
@@ -47,7 +47,7 @@ public class PentaItemPlacer : MonoBehaviour {
                 currentIngs[1] = ingrererererererererrentttt;
                 foreach (Transform t in places[1])
                 {
-                    Destroy(t);
+                    Destroy(t.gameObject);
                 }
                 GameObject newIngrerentetetet2 = Instantiate(ingrererererererererrentttt.GetGmO());
                 newIngrerentetetet2.transform.parent = places[1];
@@ -58,7 +58,7 @@ public class PentaItemPlacer : MonoBehaviour {
                 currentIngs[2] = ingrererererererererrentttt;
                 foreach (Transform t in places[2])
                 {
-                    Destroy(t);
+                    Destroy(t.gameObject);
                 }
                 GameObject newIngrenenenetetetet3 = Instantiate(ingrererererererererrentttt.GetGmO());
                 newIngrenenenetetetet3.transform.parent = places[2];
