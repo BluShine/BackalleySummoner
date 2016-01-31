@@ -4,6 +4,8 @@ using System.Linq;
 
 public class IngredientUI : MonoBehaviour {
 
+    public GameObject buttonTextPrefab;
+
     List<Transform> buttonLocations;
     List<List<GameObject>> buttons;
 
@@ -21,10 +23,20 @@ public class IngredientUI : MonoBehaviour {
             buttons.Add(new List<GameObject>());
             for(int i = 0; i < buttonLocations.Count; i++)
             {
+                //place button
                 GameObject newButton = Instantiate(g[i]);
                 newButton.transform.SetParent(buttonLocations[i]);
                 newButton.transform.localPosition = Vector3.zero;
                 newButton.transform.localScale = Vector3.one;
+                //add text thing to the button
+                GameObject textThing = Instantiate(buttonTextPrefab);
+                textThing.transform.SetParent(newButton.transform);
+                textThing.transform.localPosition = Vector3.zero;
+                textThing.transform.localScale = Vector3.one;
+                RectTransform rect = textThing.GetComponent<RectTransform>();
+                rect.offsetMin = Vector2.zero;
+                rect.offsetMax = Vector2.one;
+
                 buttons[j].Add(newButton);
             }
         }
