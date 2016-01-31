@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour {
 		float cashInflux = contract.finalPerf * contract.diff;
 		cashInflux *= cashInflowMultiplier;
 		hellBucks += cashInflux;
-		reputation += contract.diff * contract.finalPerf;
+		reputation += contract.getCachedPerformance();
 	}
 
 	//applies a passive item and removes it from your inventory
