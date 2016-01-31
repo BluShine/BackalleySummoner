@@ -27,11 +27,11 @@ public class GameManager : MonoBehaviour {
 	public Text repBox;//Reputation
 
 
-
-
 	//methods
-	void Start()
-	{
+	void Start() {
+		Debug.Log ("Game Manager Start");
+		/*Recipes.instance = new Recipes ();
+		Recipes.instance.RecipeStart ();*/
         reputation = 0;
         open_contracts = new ContractBase[6];
 		for(int i = 0; i < open_contracts.Length; i++) {
@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour {
 		HeldIngredients = new Dictionary<string, int>();
         //open_contracts[5] = new Gather_Contract();
         instance = this;
+		GenerateContracts ();
 	}
 
 	//updates the UI elements to the proper value
@@ -104,6 +105,7 @@ public class GameManager : MonoBehaviour {
                     Contains(elem))
                     .ToList());
 				int chk = rnd.Next(0, curr.Count);
+				Debug.Log (chk);
 				this.HeldIngredients[curr.ToArray()[chk].GetName()]++;
 			}
 		}
