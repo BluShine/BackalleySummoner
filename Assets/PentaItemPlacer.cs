@@ -62,12 +62,9 @@ public class PentaItemPlacer : MonoBehaviour {
             if (ingred == null)
                 return;
         }
-<<<<<<< HEAD
 
 		GameManager.instance.assignDemon(DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]));
-=======
         Debug.Log((DemonFactory.Instance == null).ToString() + "is null?");
         DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]);
->>>>>>> 0a1bbabb25fd5dd45afc4f9b9c98702a607cabfa
     }
 }
