@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour {
 	public float hellBucks;//cash dolla
 	public float reputation;//how reputable you are, 0 to 100
 	public static GameManager instance;
+   public RoundManager roundManager;
 
 	//TODO implement after initial demo
 	public List<DemonBase> availableDemons;
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour {
         open_contracts[5] = new GatherQuest();
         GenerateContracts();
         instance = this;
+        roundManager = GetComponent<RoundManager>();
 	}
 
 	//updates the UI elements to the proper value
@@ -147,11 +149,13 @@ public class GameManager : MonoBehaviour {
 			cashContract (currentUnassignedContract);
 		}
 		else cacheContract (currentUnassignedContract);
+      roundManager.RefreshContractUI();
       // Now that we've checked the demon, we can get rid of it
       Destroy(demon.gameObject);
 	}
 
 	private void cacheContract (ContractBase contract) {//called after assignDemon
+      if(!contract.repeatable) contract.accepted = true;
 		cachedContracts.Add (contract);
 	}
 
