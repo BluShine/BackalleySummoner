@@ -24,6 +24,8 @@ To summon demons, click on ingredients in your inventory to put them in the pent
 
 Different categories of ingredients correspond to different parts of the demons: head, body, and limbs. Different ingredients effect different stats of the demon: power, cleverness, seduction, deception, and occult. Demon stats effect their ability to complete different tasks when you summon them. 
 
+![image](https://github.com/BluShine/BackalleySummoner/blob/master/Assets/screenshots/demons.png)
+
 You have to experiment with different ingredient combinations to determine what ingredients you need for certain tasks. Good luck! 
 
   
