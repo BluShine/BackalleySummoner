@@ -90,6 +90,8 @@ public class GameManager : MonoBehaviour {
 	}
 	public void GiveIngredients(int tier, int num)
 	{
+		List<Ingredients> il = new List<Ingredients> ();
+
 		int batches = num / 3;
 		var values = System.Enum.GetValues(typeof(Ingredients.bodyParts));
 		System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
@@ -103,7 +105,9 @@ public class GameManager : MonoBehaviour {
                     .ToList());
 				int chk = rnd.Next(0, curr.Count);
 				Debug.Log (chk);
-				this.HeldIngredients[curr.ToArray()[chk].GetName()]++;
+				Ingredients j = curr.ToArray()[chk];
+				this.HeldIngredients[j.GetName()]++;
+				il.Add (j);
 			}
 		}
 		num -= (batches * 3);
@@ -111,7 +115,11 @@ public class GameManager : MonoBehaviour {
 		{
 			HashSet<GameObject> curr = Recipes.instance.tier_GmO[tier];
 			int chk = rnd.Next(0, curr.Count);
-			this.HeldIngredients[curr.ToArray()[chk].name]++;
+			string j = curr.ToArray()[chk].name;
+			this.HeldIngredients[j]++;
+			il.Add (Recipes.instance.name_ingredient[j]);
 		}
+
+		ItemPopup.Popup (il);
 	}
 }

@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: ef8db498819efbf47a3b128c4d140b10
-timeCreated: 1454210061
+timeCreated: 1454218573
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Occult_Body_3
     21300002: Occult_MiddleHorn_3
     21300004: Occult_LeftArm_3
-    21300006: Occult_RightLeg_3
+    21300006: Occult_RightArm_3
     21300008: Occult_LeftLeg_3
   serializedVersion: 2
   mipmaps:
@@ -123,7 +123,7 @@ TextureImporter:
         - {x: 8.8673935, y: -21.52951}
         - {x: 8.8673935, y: 11.4704895}
         - {x: 6.8673935, y: 15.4704895}
-    - name: Occult_RightLeg_3
+    - name: Occult_RightArm_3
       rect:
         serializedVersion: 2
         x: 174

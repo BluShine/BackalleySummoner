@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: f57d3558f079c5046a03a546c1559c14
+timeCreated: 1454221906
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Deception_Body_4
+    21300002: Deception_LeftHorn_4
+    21300004: Deception_RightHorn_4
+    21300006: Deception_LeftArm_4
+    21300008: Deception_RightArm_4
+    21300010: Deception_LeftLeg_4
+    21300012: Deception_RightLeg_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Deception_Body_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 410
+        width: 330
+        height: 171
+      alignment: 9
+      pivot: {x: 0.59434116, y: 0.6506719}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 131.86742, y: -12.264893}
+        - {x: 28.867416, y: 59.735107}
+        - {x: -32.132584, y: 59.735107}
+        - {x: -48.132584, y: 56.735107}
+        - {x: -196.13258, y: -19.264893}
+        - {x: -196.13258, y: -48.264893}
+        - {x: -177.13258, y: -65.26489}
+        - {x: -157.13258, y: -49.264893}
+        - {x: -154.13258, y: -46.264893}
+        - {x: -148.13258, y: -46.264893}
+        - {x: -145.13258, y: -43.264893}
+        - {x: -144.13258, y: -44.264893}
+        - {x: -149.13258, y: -46.264893}
+        - {x: -154.13258, y: -49.264893}
+        - {x: -176.13258, y: -64.26489}
+        - {x: -188.13258, y: -77.26489}
+        - {x: -192.13258, y: -83.26489}
+        - {x: -190.13258, y: -89.26489}
+        - {x: -186.13258, y: -88.26489}
+        - {x: -172.13258, y: -95.26489}
+        - {x: -169.13258, y: -94.26489}
+        - {x: -162.13258, y: -67.26489}
+        - {x: -130.13258, y: -55.264893}
+        - {x: -132.13258, y: -57.264893}
+        - {x: -138.13258, y: -58.264893}
+        - {x: -140.13258, y: -60.264893}
+        - {x: -146.13258, y: -62.264893}
+        - {x: -154.13258, y: -65.26489}
+        - {x: -161.13258, y: -71.26489}
+        - {x: -167.13258, y: -89.26489}
+        - {x: -167.13258, y: -96.26489}
+        - {x: -165.13258, y: -101.26489}
+        - {x: -163.13258, y: -105.26489}
+        - {x: -156.13258, y: -111.26489}
+        - {x: -124.13258, y: -111.26489}
+        - {x: 123.86742, y: -56.264893}
+        - {x: 133.86742, y: -27.264893}
+        - {x: 133.86742, y: -13.264893}
+    - name: Deception_LeftHorn_4
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 455
+        width: 72
+        height: 128
+      alignment: 9
+      pivot: {x: 0.26143605, y: 0.04710126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.176605, y: 105.97104}
+        - {x: 53.176605, y: 112.97104}
+        - {x: 53.176605, y: 121.97104}
+        - {x: 49.176605, y: 121.97104}
+        - {x: -18.823395, y: 24.971039}
+        - {x: -18.823395, y: -6.028961}
+        - {x: 17.176605, y: -6.028961}
+        - {x: 45.176605, y: 57.97104}
+        - {x: 39.176605, y: 58.97104}
+        - {x: 32.176605, y: 56.97104}
+    - name: Deception_RightHorn_4
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 448
+        width: 110
+        height: 115
+      alignment: 9
+      pivot: {x: 0.21697666, y: 0.051914647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.13257, y: 49.029816}
+        - {x: 41.13257, y: 47.029816}
+        - {x: 82.13257, y: 95.029816}
+        - {x: 86.13257, y: 103.029816}
+        - {x: 86.13257, y: 109.029816}
+        - {x: 79.13257, y: 109.029816}
+        - {x: -16.867432, y: 25.029816}
+        - {x: -23.867432, y: 7.0298157}
+        - {x: -23.867432, y: -1.9701843}
+        - {x: -10.867432, y: -5.9701843}
+        - {x: 17.132568, y: -5.9701843}
+        - {x: 56.13257, y: 43.029816}
+        - {x: 57.13257, y: 48.029816}
+        - {x: 54.13257, y: 50.029816}
+    - name: Deception_LeftArm_4
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 161
+        width: 111
+        height: 213
+      alignment: 9
+      pivot: {x: 0.9062037, y: 0.076632865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -61.588608, y: 156.6772}
+        - {x: -61.588608, y: 141.6772}
+        - {x: -100.58861, y: 157.6772}
+        - {x: -100.58861, y: 132.6772}
+        - {x: -93.58861, y: 128.6772}
+        - {x: -99.58861, y: 111.6772}
+        - {x: -97.58861, y: 99.6772}
+        - {x: -91.58861, y: 92.6772}
+        - {x: -88.58861, y: 92.6772}
+        - {x: -85.58861, y: 94.6772}
+        - {x: -68.58861, y: 44.6772}
+        - {x: -28.588608, y: -16.3228}
+        - {x: 10.411392, y: -16.3228}
+        - {x: 10.411392, y: 9.6772}
+        - {x: -52.588608, y: 196.6772}
+        - {x: -58.588608, y: 196.6772}
+        - {x: -60.588608, y: 184.6772}
+    - name: Deception_RightArm_4
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 138
+        width: 205
+        height: 258
+      alignment: 9
+      pivot: {x: 0.06011174, y: 0.100544125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 107.67709, y: 39.059616}
+        - {x: 103.67709, y: 39.059616}
+        - {x: 115.67709, y: 52.059616}
+        - {x: 160.6771, y: 74.059616}
+        - {x: 178.6771, y: 106.059616}
+        - {x: 162.6771, y: 112.059616}
+        - {x: 135.6771, y: 110.059616}
+        - {x: 178.6771, y: 130.05962}
+        - {x: 192.6771, y: 138.05962}
+        - {x: 192.6771, y: 193.05962}
+        - {x: 178.6771, y: 232.05962}
+        - {x: 148.6771, y: 232.05962}
+        - {x: -0.3229065, y: 56.059616}
+        - {x: -12.3229065, y: 16.059616}
+        - {x: -12.3229065, y: -16.940384}
+        - {x: 9.6770935, y: -25.940384}
+        - {x: 36.677094, y: -25.940384}
+        - {x: 63.677094, y: -0.9403839}
+        - {x: 94.67709, y: 23.059616}
+        - {x: 109.67709, y: 36.059616}
+    - name: Deception_LeftLeg_4
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 21
+        width: 120
+        height: 72
+      alignment: 9
+      pivot: {x: 0.9294151, y: 0.112333745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -101.529816, y: 41.911972}
+        - {x: -90.529816, y: 35.911972}
+        - {x: -51.529816, y: -8.08803}
+        - {x: 8.470184, y: -8.08803}
+        - {x: 8.470184, y: 23.91197}
+        - {x: -11.529816, y: 63.911972}
+        - {x: -111.529816, y: 63.911972}
+        - {x: -111.529816, y: 52.911972}
+    - name: Deception_RightLeg_4
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 9
+        width: 97
+        height: 102
+      alignment: 9
+      pivot: {x: 0.11264101, y: 0.9315199}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 54.073822, y: -7.01503}
+        - {x: 6.073822, y: 6.98497}
+        - {x: -10.926178, y: 6.98497}
+        - {x: -10.926178, y: -49.01503}
+        - {x: 73.07382, y: -95.01503}
+        - {x: 86.07382, y: -95.01503}
+        - {x: 86.07382, y: -66.01503}
+        - {x: 84.07382, y: -53.01503}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
