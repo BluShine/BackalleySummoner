@@ -9,19 +9,22 @@ public class IngredientUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        for(int j = 0; j < Recipes.instance.tier_GmO.Count; j++)
+        buttonLocations = new List<Transform>();
+        foreach(Transform t in transform)
         {
-            int i = 0;
+            buttonLocations.Add(t);
+        }
+        buttons = new List<List<GameObject>>();
+        for (int j = 0; j < Recipes.instance.tier_GmO.Count; j++)
+        {
             GameObject[] g = Recipes.instance.tier_GmO[j].ToArray();
             buttons.Add(new List<GameObject>());
-            foreach (Transform t in transform)
+            for(int i = 0; i < buttonLocations.Count; i++)
             {
-                buttonLocations.Add(t);
                 GameObject newButton = Instantiate(g[i]);
                 newButton.transform.SetParent(buttonLocations[i]);
                 newButton.transform.localPosition = Vector3.zero;
                 buttons[j].Add(newButton);
-                i++;
             }
         }
         OpenTab(0);
