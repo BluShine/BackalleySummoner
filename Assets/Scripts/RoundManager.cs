@@ -21,7 +21,7 @@ public class RoundManager : MonoBehaviour {
 		gameRunner.GenerateContracts();
 		gameRunner.GiveIngredients(1, 8);
 		for(int i = 0; i < contractDisplays.Length; i++) {
-			contractDisplays [i].text = gameRunner.open_contracts [i];
+			contractDisplays [i].text = gameRunner.open_contracts [i].writeContractTitle();
 		}
 	}
 }
