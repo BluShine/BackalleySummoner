@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 	public float cashInflowMultiplier = 1F;
 
 	public ContractBase[] open_contracts;
+	public List<ContractBase> cachedContracts;
 	//UI elements that correspond to visible stats
 	public Text cashBox;//Hell Bucks
 	public Text repBox;//Reputation
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour {
 			open_contracts[i] = new ContractBase (1F);
 		}
 		HeldIngredients = new Dictionary<string, int>();
-        //open_contracts[5] = new Gather_Contract();
+        open_contracts[5] = new GatherQuest();
         instance = this;
 		GenerateContracts ();
 	}
@@ -51,9 +52,11 @@ public class GameManager : MonoBehaviour {
 
 	//adds cash from contract to your cash reserve
 	public void cashContract (ContractBase contract) {
+		if(!contract.repeatable) contract.accepted = true;
 		float cashInflux = contract.finalPerf * contract.diff;
 		cashInflux *= cashInflowMultiplier;
 		hellBucks += cashInflux;
+		reputation += contract.diff * contract.finalPerf;
 	}
 
 	//applies a passive item and removes it from your inventory
@@ -124,5 +127,35 @@ public class GameManager : MonoBehaviour {
 		}
 
 		ItemPopup.Popup (il);
+	}
+
+
+
+	public GameObject demonScreen;
+	ContractBase currentUnassignedContract;
+	//click quest, set it to active if not repeating, go to demon screen
+	public void goToDemonAssignment (int contractIndex) {//call when you click a contract
+		demonScreen.SetActive (true);
+		currentUnassignedContract = open_contracts[contractIndex];
+	}
+
+	public void assignDemon (DemonBase demon) {//call when submitting a demon for a contract
+		currentUnassignedContract.getContractPerformance (demon);
+		demonScreen.SetActive (false);
+		if (currentUnassignedContract.repeatable) {
+			cashContract (currentUnassignedContract);
+		}
+		else cacheContract (currentUnassignedContract);
+	}
+
+	private void cacheContract (ContractBase contract) {//called after assignDemon
+		cachedContracts.Add (contract);
+	}
+
+	public void cashAllContracts () {//call when round starts
+		foreach (ContractBase CB in cachedContracts) {
+			cashContract (CB);
+		}
+		cachedContracts.Clear ();
 	}
 }
