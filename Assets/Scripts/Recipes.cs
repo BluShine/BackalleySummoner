@@ -114,6 +114,10 @@ public class Recipes : MonoBehaviour {
             }
             tier_ingredient.Add(tier_set);
         }
+<<<<<<< HEAD
+=======
+        instance = this;
+>>>>>>> bf67f0fe3ef445e826bcbd41301f29425c44bc3c
     }
 	
 	// Update is called once per frame

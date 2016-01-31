@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class ItemPopup : MonoBehaviour {
 	//method in game manager called GiveIngredients
@@ -21,13 +22,28 @@ public class ItemPopup : MonoBehaviour {
 		for (x = x; x < 8; x++) {
 			ing [x] = null;
 		}
-		GameObject.Find("item-get").SetActive(true);
-	
-	}
+        GameObject iGet = GameObject.Find("item-get");
+        iGet.SetActive(true);
+        int i = 0;
+        foreach(Transform t in iGet.transform)
+        {
+            if(i < il.Count)
+            {
+                GameObject obj = Instantiate(il[i].GetGmO());
+                obj.transform.parent = t;
+                obj.transform.localPosition = Vector3.zero;
+                obj.transform.localScale = Vector3.one;
+            }
+        }
+    }
 	
 	// Update is called once per frame
 	public static void Dismiss () {
-		GameObject.Find("item-get").SetActive(false);
-	
-	}
+        GameObject iGet = GameObject.Find("item-get");
+        foreach(Image img in iGet.GetComponentsInChildren<Image>())
+        {
+            Destroy(img.gameObject);
+        }
+        iGet.SetActive(false);
+    }
 }

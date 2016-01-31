@@ -102,17 +102,25 @@ public class ContractBase {
 
 	//builds an appropriate title for the contract
 	public virtual string writeContractTitle () {
-		List<float> orderedStats = statReqList;
+
+		List<float> orderedStats;
+		float[] tempArr = new float[5];
+		statReqList.CopyTo (tempArr);
+		orderedStats = tempArr.ToList ();
 		orderedStats.Sort ();
-		int maxStat = orderedStats.Count - 1;//first and second most important stats
-		int secondMaxStat = orderedStats.Count - 2;
+		float maxStat = orderedStats[orderedStats.Count - 1];//first and second most important stats
+		int maxLoc = statReqList.IndexOf(maxStat);
+		Debug.Log (statReqList[maxLoc]);
+		Debug.Log (statReqList[maxLoc]);
+		float secondMaxStat = orderedStats[orderedStats.Count - 2];
+		int secondMaxLoc = statReqList.IndexOf (secondMaxStat);
 
 		string noun;
 
-		string verb = verbList [maxStat] [(int)(Random.value * verbList [maxStat].Length)];
+		string verb = verbList [maxLoc] [(int)(Random.value * verbList [maxLoc].Length)];
 		string adverb;
 		noun = nounList [(int)(Random.value * nounList.Length)];
-		adverb = adverbList [secondMaxStat] [(int)(Random.value * adverbList [secondMaxStat].Length)];
+		adverb = adverbList [secondMaxLoc] [(int)(Random.value * adverbList [secondMaxLoc].Length)];
 
 		return (this.diff + "\t" + verb + " the " + noun + " " + adverb);
 	}

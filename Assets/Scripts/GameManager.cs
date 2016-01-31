@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 	public float cashInflowMultiplier = 1F;
 
 	public ContractBase[] open_contracts;
+	public List<ContractBase> cachedContracts = new List<ContractBase>(0);
 	//UI elements that correspond to visible stats
 	public Text cashBox;//Hell Bucks
 	public Text repBox;//Reputation
@@ -29,7 +30,6 @@ public class GameManager : MonoBehaviour {
 
 	//methods
 	void Start() {
-		Debug.Log ("Game Manager Start");
 		/*Recipes.instance = new Recipes ();
 		Recipes.instance.RecipeStart ();*/
         reputation = 0;
@@ -38,11 +38,11 @@ public class GameManager : MonoBehaviour {
 			open_contracts[i] = new ContractBase (1F);
 		}
 		HeldIngredients = new Dictionary<string, int>();
-        //open_contracts[5] = new Gather_Contract();
         foreach (KeyValuePair<string, Ingredients> pair in Recipes.instance.name_ingredient)
         {
             HeldIngredients.Add(pair.Key, 0);
         }
+        open_contracts[5] = new GatherQuest();
         instance = this;
 		GenerateContracts ();
 	}
@@ -55,9 +55,11 @@ public class GameManager : MonoBehaviour {
 
 	//adds cash from contract to your cash reserve
 	public void cashContract (ContractBase contract) {
+		if(!contract.repeatable) contract.accepted = true;
 		float cashInflux = contract.finalPerf * contract.diff;
 		cashInflux *= cashInflowMultiplier;
 		hellBucks += cashInflux;
+		reputation += contract.diff * contract.finalPerf;
 	}
 
 	//applies a passive item and removes it from your inventory
@@ -104,7 +106,6 @@ public class GameManager : MonoBehaviour {
                     Contains(elem))
                     .ToList());
 				int chk = rnd.Next(0, curr.Count);
-				Debug.Log (chk);
 				Ingredients j = curr.ToArray()[chk];
 				this.HeldIngredients[j.GetName()]++;
 				il.Add (j);
@@ -121,5 +122,39 @@ public class GameManager : MonoBehaviour {
 		}
 
 		ItemPopup.Popup (il);
+		IngredientUI.UpdateAllNumbers ();
+	}
+
+
+
+	public GameObject demonScreen;
+	public GameObject requestScreen;
+	ContractBase currentUnassignedContract;
+	//click quest, set it to active if not repeating, go to demon screen
+	public void goToDemonAssignment (int contractIndex) {//call when you click a contract
+		Debug.Log("asssigned");
+		demonScreen.SetActive (true);
+		requestScreen.SetActive (false);
+		currentUnassignedContract = open_contracts[contractIndex];
+	}
+
+	public void assignDemon (DemonBase demon) {//call when submitting a demon for a contract
+		currentUnassignedContract.getContractPerformance (demon);
+		demonScreen.SetActive (false);
+		if (currentUnassignedContract.repeatable) {
+			cashContract (currentUnassignedContract);
+		}
+		else cacheContract (currentUnassignedContract);
+	}
+
+	private void cacheContract (ContractBase contract) {//called after assignDemon
+		cachedContracts.Add (contract);
+	}
+
+	public void cashAllContracts () {//call when round starts
+		foreach (ContractBase CB in cachedContracts) {
+			cashContract (CB);
+		}
+		cachedContracts.Clear ();
 	}
 }
