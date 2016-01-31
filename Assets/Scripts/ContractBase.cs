@@ -36,7 +36,7 @@ public class ContractBase {
 		contractName = writeContractTitle ();
         this.accepted = false;
         this.repeatable = false;
-        rewardMoney = 10 * Mathf.FloorToInt(Mathf.Pow(diff, MONEYCURVE));
+        rewardMoney = 10 * Mathf.FloorToInt(Mathf.Pow(diff + Random.value * .5f, MONEYCURVE));
     }
 
 	public ContractBase (int[] statReqs, float[] statDifficulties) {//to initialize a contract with a specific set of stat indices with specific difficulties.  the two arrays match up 1 to 1
