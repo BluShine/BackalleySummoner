@@ -10,18 +10,28 @@ public class Recipes : MonoBehaviour {
     // Use this for initialization
     public static Recipes instance;
     public GameObject base_ingredients;
-	public void Awake () {
-		Debug.Log ("recipe start");
+    public void Awake() {
+        GenRecipes();
+        instance = this;
+    }
+    public static void GenRecipesCall()
+    {
+        instance.GenRecipes();
+    }
+	void GenRecipes () {
         tier_ingredient = new List<HashSet<Ingredients>>();
         System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
-        tier_GmO = new List<HashSet<GameObject>>(new HashSet<GameObject>[] {});
-        foreach (Transform tiers in base_ingredients.transform)
+        if (tier_GmO == null)
         {
-            HashSet<GameObject> h = new HashSet<GameObject>();
-            tier_GmO.Add(h);
-            foreach (Transform ingredient in tiers)
+            tier_GmO = new List<HashSet<GameObject>>(new HashSet<GameObject>[] { });
+            foreach (Transform tiers in base_ingredients.transform)
             {
-                h.Add(ingredient.gameObject);
+                HashSet<GameObject> h = new HashSet<GameObject>();
+                tier_GmO.Add(h);
+                foreach (Transform ingredient in tiers)
+                {
+                    h.Add(ingredient.gameObject);
+                }
             }
         }
         stat_ingredient = new Dictionary<Ingredients.stats, HashSet<Ingredients>>();
@@ -104,8 +114,6 @@ public class Recipes : MonoBehaviour {
             }
             tier_ingredient.Add(tier_set);
         }
-        instance = this;
-        Debug.Log(name_ingredient.Count);
     }
 	
 	// Update is called once per frame
