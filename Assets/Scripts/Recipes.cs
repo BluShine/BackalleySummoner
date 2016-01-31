@@ -8,11 +8,19 @@ public class Recipes : MonoBehaviour {
     public List<HashSet<GameObject>> tier_ingredient;
     // Use this for initialization
     public static Recipes instance;
+    public GameObject base_ingredients;
 	void Start () {
         System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
-        tier_ingredient = new List<HashSet<GameObject>>(new HashSet<GameObject>[] {
-            new HashSet<GameObject>(), new HashSet<GameObject>(),
-            new HashSet<GameObject>(), new HashSet<GameObject>(), new HashSet<GameObject>()});
+        tier_ingredient = new List<HashSet<GameObject>>(new HashSet<GameObject>[] {});
+        foreach (Transform tiers in base_ingredients.transform)
+        {
+            HashSet<GameObject> h = new HashSet<GameObject>();
+            tier_ingredient.Add(h);
+            foreach (Transform ingredient in tiers)
+            {
+                h.Add(ingredient.gameObject);
+            }
+        }
         stat_ingredient = new Dictionary<Ingredients.stats, HashSet<Ingredients>>();
         part_ingredient = new Dictionary<Ingredients.bodyParts, HashSet<Ingredients>>();
         var values = System.Enum.GetValues(typeof(Ingredients.bodyParts));
@@ -91,6 +99,7 @@ public class Recipes : MonoBehaviour {
             }
         }
         instance = this;
+        Debug.Log(ingredient_stat.Count);
     }
 	
 	// Update is called once per frame
@@ -104,9 +113,6 @@ public class Recipes : MonoBehaviour {
     }
     List<GameObject> GetIngredientsTier(int x)
     {
-        if(!tier_ingredient[x].Any())
-        {
-        }
         return this.tier_ingredient[x].ToList();
     }
 }
