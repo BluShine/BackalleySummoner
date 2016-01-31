@@ -1,8 +1,8 @@
 # BackalleySummoner
 
-![image](https://github.com/BluShine/BackalleySummoner/blob/master/Assets/prelim/circle.png)
-
 Created for Global Game Jam 2016. 
+
+![image](https://github.com/BluShine/BackalleySummoner/blob/master/Assets/prelim/circle.png)
 
 ![image](https://github.com/BluShine/BackalleySummoner/blob/master/Assets/screenshots/main_ss.png)
 
