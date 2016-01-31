@@ -39,11 +39,6 @@ public class GameManager : MonoBehaviour {
 		}
 		HeldIngredients = new Dictionary<string, int>();
         //open_contracts[5] = new Gather_Contract();
-        while (Recipes.instance == null) ;
-        foreach (KeyValuePair<string, Ingredients> pair in Recipes.instance.name_ingredient)
-        {
-            HeldIngredients.Add(pair.Key, 0);
-        }
         instance = this;
 	}
 
@@ -93,6 +88,13 @@ public class GameManager : MonoBehaviour {
 		int batches = num / 3;
 		var values = System.Enum.GetValues(typeof(Ingredients.bodyParts));
 		System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
+        if(!this.HeldIngredients.Any())
+        {
+            foreach (KeyValuePair<string, Ingredients> pair in Recipes.instance.name_ingredient)
+            {
+                HeldIngredients.Add(pair.Key, 0);
+            }
+        }
 		for(int x = 0; x < batches; x++)
 		{
 			foreach(Ingredients.bodyParts part in values)
