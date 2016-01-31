@@ -21,15 +21,16 @@ public class RoundManager : MonoBehaviour {
 		foreach (Text t in contractDisplays)
 			t.gameObject.SetActive (false);
 		if (GameManager.instance.reputation < 0) {
-			GameObject.Find ("lose-screen").SetActive (true);
+			EndStates.Lose (GameManager.instance.hellBucks);
 			return;
 		} else if(this.roundCount > 10 && GameManager.instance.hellBucks > 200)
 		{
-			GameObject.Find("win-screen").SetActive(true);
+			EndStates.Win (GameManager.instance.hellBucks);
 			return;
 		} else if(this.roundCount > 10)
 		{
-			GameObject.Find("end-screen").SetActive(true);
+			EndStates.Neutral (GameManager.instance.hellBucks);
+			return;
 		}
 		foreach (ContractBase CB in gameRunner.open_contracts.Where (elem => elem.accepted).ToArray()) {
 			gameRunner.cashContract (CB);
