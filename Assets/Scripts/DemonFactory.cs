@@ -83,6 +83,8 @@ public class DemonFactory : MonoBehaviour
       newDemon.name = bodyStat + "_" + limbStat + "_" + hornStat;
       newDemon.transform.position = Vector3.zero;
       SpriteRenderer bodySprite = newDemon.AddComponent<SpriteRenderer>();
+      bodySprite.sortingLayerName = "Demons";
+      bodySprite.sortingOrder = 2;
       List<Sprite> attrSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Parts/" + bodyStat + "_" + (bodyTier + 1)));
       bodySprite.sprite = attrSprites.Find(x => x.name == bodyStat + "_Body_" + (bodyTier + 1));
 
@@ -96,6 +98,7 @@ public class DemonFactory : MonoBehaviour
          newAppendage.name = limbNames[i];
          List<Sprite> appendSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Parts/" + limbStat + "_" + (limbTier + 1)));
          newAppendage.GetComponent<SpriteRenderer>().sprite = appendSprites.Find(x => x.name == limbStat + "_" + limbNames[i] + "_" + (limbTier + 1));
+         newAppendage.GetComponent<SpriteRenderer>().sortingLayerName = "Demons";
       }
 
       // Grab the Horns
@@ -107,6 +110,7 @@ public class DemonFactory : MonoBehaviour
          newAppendage.name = hornNames[i];
          List<Sprite> appendSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Parts/" + hornStat + "_" + (hornTier + 1)));
          newAppendage.GetComponent<SpriteRenderer>().sprite = appendSprites.Find(x => x.name == hornStat + "_" + hornNames[i] + "_" + (hornTier + 1));
+         newAppendage.GetComponent<SpriteRenderer>().sortingLayerName = "Demons";
       }
 
       return newDemon.AddComponent<DemonBase>();
