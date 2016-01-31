@@ -58,7 +58,10 @@ public class GameManager : MonoBehaviour {
 	//adds cash from contract to your cash reserve
 	public void cashContract (ContractBase contract) {
 		if(!contract.repeatable) contract.accepted = true;
-		float cashInflux = contract.finalPerf * contract.diff;
+        //float cashInflux = contract.finalPerf * contract.diff;
+        float cashInflux = 0;
+        if (contract.getCachedPerformance() > 1)
+            cashInflux = contract.rewardMoney;
 		cashInflux *= cashInflowMultiplier;
 		hellBucks += cashInflux;
 		reputation += contract.getCachedPerformance();
