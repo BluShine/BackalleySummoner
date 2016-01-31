@@ -20,11 +20,11 @@ public class RoundManager : MonoBehaviour {
 		if (GameManager.instance.reputation < 0) {
 			GameObject.Find ("lose-screen").SetActive (true);
 			return;
-		} elif(this.roundCount > 10 && GameManager.instance.hellBucks > 200)
+		} else if(this.roundCount > 10 && GameManager.instance.hellBucks > 200)
 		{
 			GameObject.Find("win-screen").SetActive(true);
 			return;
-		} elif(this.roundCount > 10)
+		} else if(this.roundCount > 10)
 		{
 			GameObject.Find("end-screen").SetActive(true);
 		}
