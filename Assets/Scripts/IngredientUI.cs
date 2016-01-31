@@ -82,4 +82,12 @@ public class IngredientUI : MonoBehaviour {
             b.SetActive(true);
         }
     }
+
+    public static void UpdateAllNumbers()
+    {
+        foreach(IngredientUI i in GameObject.FindObjectsOfType<IngredientUI>())
+        {
+            i.UpdateNumbers();
+        }
+    }
 }

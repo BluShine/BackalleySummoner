@@ -54,9 +54,10 @@ public class TwitchReader : MonoBehaviour {
             if(message.Contains(s))
             {
                 if(message.Contains("-"))
-                    GameManager.instance.HeldIngredients[s]--;
+                    GameManager.instance.HeldIngredients[s] = Mathf.Min(0, GameManager.instance.HeldIngredients[s] - 1);
                 else
                     GameManager.instance.HeldIngredients[s]++;
+                IngredientUI.UpdateAllNumbers();
                 return;
             }
         }
