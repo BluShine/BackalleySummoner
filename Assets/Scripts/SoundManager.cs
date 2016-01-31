@@ -40,7 +40,7 @@ public class SoundManager : MonoBehaviour {
 			musicSource.clip = clipList [2];
 			break;
 		case("summon"):
-			soundSource.clip = clipList [3];
+			musicSource.clip = clipList [3];
 			break;
 		}
 		musicSource.Play ();
