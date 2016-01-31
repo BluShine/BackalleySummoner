@@ -15,7 +15,8 @@ public class Recipes : MonoBehaviour {
         part_ingredient = new Dictionary<Ingredients.bodyParts, HashSet<Ingredients>>();
         for (int x = 0; x < tier_ingredient.Count; x++)
         {
-            List<string> ingredient_l = GetIngredientsTier(x);
+			List<string> ingredient_l = null;
+            //List<string> ingredient_l = GetIngredientsTier(x);
             string[] stats = new string[ingredient_l.Count];
             int[] parts_n = new int[5];
             int[] parts_v = { 2, 3, 5 };
