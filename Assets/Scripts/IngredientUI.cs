@@ -24,6 +24,7 @@ public class IngredientUI : MonoBehaviour {
                 GameObject newButton = Instantiate(g[i]);
                 newButton.transform.SetParent(buttonLocations[i]);
                 newButton.transform.localPosition = Vector3.zero;
+                newButton.transform.localScale = Vector3.one;
                 buttons[j].Add(newButton);
             }
         }
