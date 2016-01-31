@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Net.Sockets;
 using System.IO;
+using UnityEngine.UI;
 
 public class TwitchInterface : MonoBehaviour {
 
@@ -22,6 +23,9 @@ public class TwitchInterface : MonoBehaviour {
     /// </summary>
     public string channel = "#bobross";
 
+    public InputField usernameField;
+    public InputField oauthField; 
+
     //recieved messages delegate
     public delegate void RecievedMessage(string message);
     public RecievedMessage messageReciever;
@@ -30,6 +34,9 @@ public class TwitchInterface : MonoBehaviour {
     private NetworkStream nStream;
     private StreamReader sReader;
     private StreamWriter sWriter;
+
+    bool connected = false;
+    public GameObject connectObject;
 
     public struct TwitchChatMessage
     {
@@ -44,15 +51,23 @@ public class TwitchInterface : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Connect();
-	}
+        connectObject.SetActive(false);
+
+    }
 
     public void Connect()
     {
+        if (connected)
+            return;
+
         tcpClient = new TcpClient(SERVER, PORT);
         nStream = tcpClient.GetStream();
         sReader = new StreamReader(nStream);
         sWriter = new StreamWriter(nStream);
+
+        username = usernameField.text.ToLower();
+        oauthToken = oauthField.text;
+        channel = "#" + username;
 
         Write("USER " + username + "tmi twitch :" + username);
         Write("PASS " + oauthToken);
@@ -68,7 +83,7 @@ public class TwitchInterface : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //check for new data
-	    while(nStream.DataAvailable)
+        while (nStream != null && nStream.DataAvailable)
         {
             string data = sReader.ReadLine();
             if (data != null)
@@ -95,6 +110,8 @@ public class TwitchInterface : MonoBehaviour {
                 Write(("MODE " + username + " +B"));
                 Write("JOIN " + channel);
                 Write("PRIVMSG " + channel + " :Game connected!");
+                connected = true;
+                connectObject.SetActive(true);
                 break;
             default:
                 break;
