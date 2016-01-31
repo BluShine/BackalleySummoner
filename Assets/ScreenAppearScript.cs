@@ -15,6 +15,7 @@ public class ScreenAppearScript : MonoBehaviour {
 
 	public void MakeVisible () {
 		foreach (Transform t in transform) {
+			Debug.Log ("click");
 			t.gameObject.SetActive (true);
 		}
 	}
