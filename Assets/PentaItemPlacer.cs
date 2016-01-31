@@ -52,6 +52,13 @@ public class PentaItemPlacer : MonoBehaviour {
 
     public void SubmitDemon()
     {
+        foreach(Transform t in places)
+        {
+            if(t.childCount < 1)
+            {
+                return;
+            }
+        }
         foreach (Ingredients ingred in currentIngs)
         {
            if(ingred == null)
