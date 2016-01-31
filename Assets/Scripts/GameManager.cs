@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour {
             cashInflux = contract.rewardMoney;
 		cashInflux *= cashInflowMultiplier;
 		hellBucks += cashInflux;
-        Debug.Log(contract.getCachedPerformance());
 		reputation += contract.getCachedPerformance();
 	}
 
@@ -165,7 +164,7 @@ public class GameManager : MonoBehaviour {
 
 	public void cashAllContracts () {//call when round starts
 		foreach (ContractBase CB in cachedContracts) {
-			cashContract (CB);
+			//cashContract (CB);
 		}
 		cachedContracts.Clear ();
 	}

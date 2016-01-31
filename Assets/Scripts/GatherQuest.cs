@@ -11,7 +11,7 @@ public class GatherQuest : ContractBase {
     public override float getContractPerformance(DemonBase demon)
     {
         GameManager.instance.GiveIngredients(Mathf.Min(demon.GetTier(), 4), 4);
-		this.finalPerf = (-1f*demon.GetTier());
+		this.finalPerf = (-2f*demon.GetTier());
 		return this.finalPerf;
     }
     public override string writeContractTitle()

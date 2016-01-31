@@ -130,6 +130,6 @@ public class ContractBase {
 
 	// Returns how well you did on the contract the last time you ran it
 	public virtual float getCachedPerformance() {
-		return 6.6F / (5F * Mathf.Pow ((diff * Mathf.Log (finalPerf)), (2F / 5f)));
+        return Mathf.Floor((finalPerf - (diff)));
 	}
 }
