@@ -130,11 +130,14 @@ public class GameManager : MonoBehaviour {
 	public GameObject demonScreen;
 	public GameObject requestScreen;
 	ContractBase currentUnassignedContract;
+	public Text topRightField;
 	//click quest, set it to active if not repeating, go to demon screen
 	public void goToDemonAssignment (int contractIndex) {//call when you click a contract
 		demonScreen.SetActive (true);
 		requestScreen.SetActive (false);
 		currentUnassignedContract = open_contracts[contractIndex];
+		topRightField.text = open_contracts [contractIndex].contractName;
+		Debug.Log (open_contracts[contractIndex].contractName);
 	}
 
 	public void assignDemon (DemonBase demon) {//call when submitting a demon for a contract

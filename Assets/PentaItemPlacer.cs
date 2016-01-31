@@ -69,6 +69,6 @@ public class PentaItemPlacer : MonoBehaviour {
         IngredientUI.UpdateAllNumbers();
 
 		GameManager.instance.assignDemon(DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]));
-        DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]);
+        //DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]);
     }
 }

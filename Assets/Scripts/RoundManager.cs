@@ -37,7 +37,7 @@ public class RoundManager : MonoBehaviour {
 		gameRunner.GenerateContracts();
 		gameRunner.GiveIngredients(0, 8);
 		for(int i = 0; i < contractDisplays.Length; i++) {
-			contractDisplays [i].text = gameRunner.open_contracts [i].writeContractTitle();
+			contractDisplays [i].text = gameRunner.open_contracts [i].contractName;
 		}
 		gameRunner.updateUI ();
 		IngredientUI.UpdateAllNumbers ();
