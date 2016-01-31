@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class PentaItemPlacer : MonoBehaviour {
 
-    public IngredientUI ui;
+
+    public IngredientUI ingredUI;
     List<Transform> places;
 
     public Ingredients[] currentIngs;
@@ -12,7 +13,7 @@ public class PentaItemPlacer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         currentIngs = new Ingredients[3];
-	    foreach(List<GameObject> lg in ui.buttons)
+	    foreach(List<GameObject> lg in ingredUI.buttons)
         {
             foreach(GameObject g in lg)
             {
