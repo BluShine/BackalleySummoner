@@ -8,15 +8,18 @@ public class RoundManager : MonoBehaviour {
 	public GameManager gameRunner;
 	public List<ContractBase> completedContracts;
 	public Text[] contractDisplays = new Text[6];
-	public int roundCount;
+	public int roundCount = 0;
 	void Start () {
-		this.roundCount = 1;
 		//gameRunner.GenerateContracts ();
 		//StartRound ();
 	}
 
 	//assigns 5 contracts, cashes intermediate contracts, gives ingredients
 	public void StartRound () {
+		if (roundCount != 0 && gameRunner.cachedContracts.Count > 0)
+			gameRunner.cashAllContracts ();
+		foreach (Text t in contractDisplays)
+			t.gameObject.SetActive (false);
 		if (GameManager.instance.reputation < 0) {
 			GameObject.Find ("lose-screen").SetActive (true);
 			return;
@@ -37,5 +40,6 @@ public class RoundManager : MonoBehaviour {
 			contractDisplays [i].text = gameRunner.open_contracts [i].writeContractTitle();
 		}
 		gameRunner.updateUI ();
+		roundCount++;
 	}
 }
