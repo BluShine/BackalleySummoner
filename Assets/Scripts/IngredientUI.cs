@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,10 +10,11 @@ public class IngredientUI : MonoBehaviour {
     List<Transform> buttonLocations;
     List<List<GameObject>> buttons;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         buttonLocations = new List<Transform>();
-        foreach(Transform t in transform)
+        foreach (Transform t in transform)
         {
             buttonLocations.Add(t);
         }
@@ -21,10 +23,11 @@ public class IngredientUI : MonoBehaviour {
         {
             GameObject[] g = Recipes.instance.tier_GmO[j].ToArray();
             buttons.Add(new List<GameObject>());
-            for(int i = 0; i < buttonLocations.Count; i++)
+            for (int i = 0; i < buttonLocations.Count; i++)
             {
                 //place button
                 GameObject newButton = Instantiate(g[i]);
+                newButton.name = g[i].name;
                 newButton.transform.SetParent(buttonLocations[i]);
                 newButton.transform.localPosition = Vector3.zero;
                 newButton.transform.localScale = Vector3.one;
@@ -41,7 +44,29 @@ public class IngredientUI : MonoBehaviour {
             }
         }
         OpenTab(0);
-	}
+    }
+
+    public void UpdateNumbers()
+    {
+        foreach(List<GameObject> l in buttons)
+        {
+            foreach(GameObject g in l)
+            {
+                int num = GameManager.instance.HeldIngredients[g.name];
+                foreach(Text t in g.GetComponentsInChildren<Text>())
+                {
+                    t.text = num.ToString();
+                }
+                if(num == 0)
+                {
+                    g.GetComponent<Image>().enabled = true;
+                } else
+                {
+                    g.GetComponent<Image>().enabled = false;
+                }
+            }
+        }
+    }
 	
 	public void OpenTab(int tab)
     {
