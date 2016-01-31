@@ -9,10 +9,8 @@ public class RoundManager : MonoBehaviour {
 	public List<ContractBase> completedContracts;
 	public Text[] contractDisplays = new Text[6];
 	public int roundCount = 0;
-	void Start () {
-		//gameRunner.GenerateContracts ();
-		//StartRound ();
-	}
+	public GameObject[] disableAfterStart;
+	public void disableInvScreens () {foreach (GameObject g in disableAfterStart) g.SetActive (false);}
 
 	//assigns 5 contracts, cashes intermediate contracts, gives ingredients
 	public void StartRound () {
