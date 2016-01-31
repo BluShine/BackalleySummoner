@@ -8,7 +8,7 @@ public class IngredientUI : MonoBehaviour {
     public GameObject buttonTextPrefab;
 
     List<Transform> buttonLocations;
-    List<List<GameObject>> buttons;
+    public List<List<GameObject>> buttons;
 
     // Use this for initialization
     void Start()
