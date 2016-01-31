@@ -1,16 +1,17 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class ContractBase {
 	public float perfTimeMult = 1F;
 	public float finalPerf;//how well the contract was completed in the end
-
+	public float diff;
 	public string contractName;//IMPORTANT: MUST  BE ASSIGNED TO POST POINT DISTRIBUTION
 
 	//stats
 	//0 - 4 corresponds to strength, cleverness, seduction, deception, occult
-	public List<float> statReqList = new List<float>();
+	public List<float> statReqList;
     public bool accepted;
     public bool repeatable;
 
@@ -26,13 +27,18 @@ public class ContractBase {
     }
 
 	public ContractBase(float difficulty) {
+		diff = difficulty;
+		statReqList = (new float[] {0F, 0F, 0F, 0F, 0F}).ToList();
 		distributeStats (difficulty); 
 		initWords ();
 		contractName = writeContractTitle ();
         this.accepted = false;
         this.repeatable = false;
+
 	}
+
 	public ContractBase (int[] statReqs, float[] statDifficulties) {//to initialize a contract with a specific set of stat indices with specific difficulties.  the two arrays match up 1 to 1
+		diff = statDifficulties.Sum();
 		for(int i = 0; i < statReqs.Length; i++) {//for each index i of stat requirements
 			statReqList [statReqs[i]] = statDifficulties [i];//set the stat requirement of the statReq index 
 		}
@@ -67,7 +73,7 @@ public class ContractBase {
 		float diffBase = difficulty / statCount;//the mid value of stat requirements
 		for (int i = 0; i < statReqList.Count; i++) {
 			if (statReqList [i] > 0.5F) {
-				statReqList [i] = Random.Range (diffBase - (diffBase / 2), diffBase + (diffBase / 2));
+				statReqList [i] = Mathf.Abs(Random.Range (diffBase - (diffBase / 2), diffBase + (diffBase / 2)));
 			} else {
 				statReqList [i] = 0F;
 			}
@@ -102,6 +108,7 @@ public class ContractBase {
 		int secondMaxStat = orderedStats.Count - 2;
 
 		string noun;
+
 		string verb = verbList [maxStat] [(int)(Random.value * verbList [maxStat].Length)];
 		string adverb;
 		noun = nounList [(int)(Random.value * nounList.Length)];
