@@ -95,9 +95,9 @@ public class GameManager : MonoBehaviour {
         num -= (batches * 3);
         for (int x = 0; x < num; x++)
         {
-            HashSet<string> curr = Recipes.instance.tier_ingredient[tier];
+            HashSet<GameObject> curr = Recipes.instance.tier_ingredient[tier];
             int chk = rnd.Next(0, curr.Count);
-            this.HeldIngredients[curr.ToArray()[chk]]++;
+            this.HeldIngredients[curr.ToArray()[chk].name]++;
         }
     }
 }
