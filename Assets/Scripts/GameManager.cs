@@ -32,13 +32,19 @@ public class GameManager : MonoBehaviour {
 	//methods
 	void Start()
 	{
-		open_contracts = new ContractBase[6];
+        reputation = 0;
+        open_contracts = new ContractBase[6];
 		for(int i = 0; i < open_contracts.Length; i++) {
 			open_contracts[i] = new ContractBase (1F);
 		}
 		HeldIngredients = new Dictionary<string, int>();
-		//open_contracts[5] = new Gather_Contract();
-		instance = this;
+        //open_contracts[5] = new Gather_Contract();
+        while (Recipes.instance == null) ;
+        foreach (KeyValuePair<string, Ingredients> pair in Recipes.instance.name_ingredient)
+        {
+            HeldIngredients.Add(pair.Key, 0);
+        }
+        instance = this;
 	}
 
 	//updates the UI elements to the proper value
