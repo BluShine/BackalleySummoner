@@ -8,17 +8,14 @@ public class GatherQuest : ContractBase {
         this.contractName = writeContractTitle();
 
     }
-    public override float getContractCompletionTime(DemonBase demon)
-    {
-        return .1f;
-    }
     public override float getContractPerformance(DemonBase demon)
     {
-        GameManager.instance.GiveIngredients(demon.GetTier(), 4);
-        return 1f;
+        GameManager.instance.GiveIngredients(Mathf.Max(demon.GetTier(), 4), 4);
+        this.finalPerf = -1f * demon.GetTier();
+        return -1f*demon.GetTier();
     }
     public override string writeContractTitle()
     {
-        return "Gather Quest";
+        return "Gather Ingredients";
     }
 }
