@@ -59,10 +59,12 @@ public class IngredientUI : MonoBehaviour {
                 }
                 if(num == 0)
                 {
-                    g.GetComponent<Image>().enabled = true;
+                    if(g.name.Contains("Text"))
+                        g.GetComponent<Image>().enabled = true;
                 } else
                 {
-                    g.GetComponent<Image>().enabled = false;
+                    if (g.name.Contains("Text"))
+                        g.GetComponent<Image>().enabled = false;
                 }
             }
         }

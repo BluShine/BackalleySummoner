@@ -17,7 +17,8 @@ public class PentaItemPlacer : MonoBehaviour {
         {
             foreach(GameObject g in lg)
             {
-                g.GetComponent<Button>().onClick.AddListener(() => PlaceItem(g)); 
+                GameObject p = g;
+                g.GetComponent<Button>().onClick.AddListener(() => PlaceItem(p)); 
             }
         }
         places = new List<Transform>();
@@ -30,42 +31,28 @@ public class PentaItemPlacer : MonoBehaviour {
 	public void PlaceItem(GameObject item)
     {
         Ingredients ingrererererererererrentttt = Recipes.instance.name_ingredient[item.name];
+        int index = 0;
         switch (ingrererererererererrentttt.GetPart())
         {
             case Ingredients.bodyParts.Horns:
-                currentIngs[0] = ingrererererererererrentttt;
-                foreach(Transform t in places[0])
-                {
-                    Destroy(t.gameObject);
-                }
-                GameObject newIngrentetetet = Instantiate(ingrererererererererrentttt.GetGmO());
-                newIngrentetetet.transform.parent = places[0];
-                newIngrentetetet.transform.localPosition = Vector3.zero;
-                newIngrentetetet.transform.localScale = Vector3.one;
+                index = 0;
                 break;
             case Ingredients.bodyParts.Body:
-                currentIngs[1] = ingrererererererererrentttt;
-                foreach (Transform t in places[1])
-                {
-                    Destroy(t.gameObject);
-                }
-                GameObject newIngrerentetetet2 = Instantiate(ingrererererererererrentttt.GetGmO());
-                newIngrerentetetet2.transform.parent = places[1];
-                newIngrerentetetet2.transform.localPosition = Vector3.zero;
-                newIngrerentetetet2.transform.localScale = Vector3.one;
+                index = 1;
                 break;
             case Ingredients.bodyParts.Limbs:
-                currentIngs[2] = ingrererererererererrentttt;
-                foreach (Transform t in places[2])
-                {
-                    Destroy(t.gameObject);
-                }
-                GameObject newIngrenenenetetetet3 = Instantiate(ingrererererererererrentttt.GetGmO());
-                newIngrenenenetetetet3.transform.parent = places[2];
-                newIngrenenenetetetet3.transform.localPosition = Vector3.zero;
-                newIngrenenenetetetet3.transform.localScale = Vector3.one;
+                index = 2;
                 break;
         }
+        currentIngs[index] = ingrererererererererrentttt;
+        foreach (Transform t in places[index])
+        {
+            Destroy(t.gameObject);
+        }
+        GameObject newIngrentetetet = Instantiate(ingrererererererererrentttt.GetGmO());
+        newIngrentetetet.transform.parent = places[index];
+        newIngrentetetet.transform.localPosition = Vector3.zero;
+        newIngrentetetet.transform.localScale = Vector3.one;
     }
 
     public void SubmitDemon()
@@ -75,7 +62,12 @@ public class PentaItemPlacer : MonoBehaviour {
             if (ingred == null)
                 return;
         }
+<<<<<<< HEAD
 
 		GameManager.instance.assignDemon(DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]));
+=======
+        Debug.Log((DemonFactory.Instance == null).ToString() + "is null?");
+        DemonFactory.Instance.makeDemon(currentIngs[1], currentIngs[2], currentIngs[0]);
+>>>>>>> 0a1bbabb25fd5dd45afc4f9b9c98702a607cabfa
     }
 }
