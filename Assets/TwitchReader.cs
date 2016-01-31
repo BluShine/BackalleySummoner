@@ -1,14 +1,20 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class TwitchReader : MonoBehaviour {
 
     public TwitchInterface tInterface;
 
+    List<string> spawnableIngredients;
+
 	// Use this for initialization
 	void Start () {
         //build list of items
-        foreach
+        spawnableIngredients = new List<string>();
+        foreach (string s in Recipes.instance.ingredient_stat.Keys)
+        {
+            spawnableIngredients.Add(s);
+        }
         //add listener
         tInterface.messageReciever += readMessage;
 
@@ -21,6 +27,13 @@ public class TwitchReader : MonoBehaviour {
 
     void readMessage(string message)
     {
-
+        foreach(string s in spawnableIngredients)
+        {
+            if(message.Contains(s))
+            {
+                Debug.Log("twitch: " + s);
+                return;
+            }
+        }
     }
 }
