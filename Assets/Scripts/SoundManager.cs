@@ -8,6 +8,12 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource soundSource;
 	public AudioSource musicSource;
 
+	public static SoundManager instance;
+
+	void Start () {
+		instance = this;
+	}
+
 	public void playSound (string clip) {
 		switch (clip) {
 		case("power"):
