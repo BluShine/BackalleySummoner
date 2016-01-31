@@ -114,7 +114,7 @@ public class ContractBase {
 		noun = nounList [(int)(Random.value * nounList.Length)];
 		adverb = adverbList [secondMaxStat] [(int)(Random.value * adverbList [secondMaxStat].Length)];
 
-		return (verb + " the " + noun + " " + adverb);
+		return (this.diff + "\t" + verb + " the " + noun + " " + adverb);
 	}
 
 }
