@@ -120,7 +120,7 @@ public class ContractBase {
 		noun = nounList [(int)(Random.value * nounList.Length)];
 		adverb = adverbList [secondMaxLoc] [(int)(Random.value * adverbList [secondMaxLoc].Length)];
 
-		return (this.diff + "\t" + verb + " the " + noun + " " + adverb);
+		return (verb + " the " + noun + " " + adverb);
 	}
 
 	// Returns how well you did on the contract the last time you ran it
