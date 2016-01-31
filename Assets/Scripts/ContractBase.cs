@@ -20,7 +20,19 @@ public class ContractBase {
 	//sentence is verb + noun + adverb
 	//verb is from top stat, adverb is from 2nd top stat
 	public List<string[]> verbList = new List<string[]>(5);//no need for spaces at the beginning or ends
-	public string[] nounList = {"president", "pizza guy", "tax collector", "pope", "mayor", "internet shitposter", "neighbor lady", "math teacher", "principal", "boss", "ceo", "in-laws"};
+	public string[] nounList = {"the president", "the pizza guy", "the tax collector", "the pope", "the mayor",
+        "an internet shitposter", "my neighbor lady", "my math teacher", "the principal", "my boss",
+        "the CEO", "my in-laws", "my mother", "my father", "my brother",
+        "my sister", "a goose", "my cousin", "the prime minister", "the baker",
+        "the farmer", "the candlestick maker", "the developers of this game", "the cab driver",
+        "me", "yourself", "a stranger", "the duke", "the king",
+        "the count", "the duchess", "the abbot", "the queen", "the princess",
+        "the prince", "the carpenter", "the candyman", "memes", "everybody",
+        "the world", "aliens", "bigfoot", "the pharaoh", "my dungeon master",
+        "that guy", "somebody", "anyone", "a hot dude", "a hot girl",
+        "a hot robot", "Dracula", "a skeleton", "an army of skeletons",
+        "a windmill", "the dragon", "a horde of rats", "a ghost",
+        "a toad", "my plants", "my cat"};
 	public List<string[]> adverbList = new List<string[]>(5);
 
     public ContractBase()
@@ -51,17 +63,35 @@ public class ContractBase {
 
 	//initializes the arrays of verbs and adverbs
 	private void initWords () {
-		verbList.Add (new string[] {"kill", "hurt", "maim", "crush", "rough up"});//power
-		verbList.Add (new string[] {"fool", "dupe", "trick", "stupify", "mislead"});//cleverness
-		verbList.Add (new string[] {"attract", "allure", "tempt", "maneuver", "lure"});//seduction
-		verbList.Add (new string[] {"lie to", "swindle", "cheat", "dupe", "delude"});//deception
-		verbList.Add (new string[] {"electrify", "singe", "flood", "reduce", "disintegrate"});//occult
+		verbList.Add (new string[] {"kill", "hurt", "maim", "crush", "rough up",
+            "obliderate", "punch", "kick", "slap", "wrestle",
+            "intimidate", "duel"});//power
+		verbList.Add (new string[] {"debate",
+            "impress", "babysit", "respect", "make", "build",
+            "construct", "engineer", "repair", "modify", "craft",
+            "fix", "maintain", "grease", "water"});//cleverness
+		verbList.Add (new string[] {"attract", "allure", "tempt", "maneuver", "lure",
+            "seduce", "date", "dance with", "charm", "infect",
+            "smooch", "make out with", "caress", "propose to", "marry",
+            "lick", "feed"});//seduction
+		verbList.Add (new string[] {"lie to", "swindle", "cheat", "dupe", "delude",
+            "mislead", "impersonate", "steal from", "fool", "dupe",
+            "trick", "stupify"});//deception
+		verbList.Add (new string[] {"electrify", "singe", "flood", "reduce", "disintegrate",
+            "freeze", "burn", "transform", "polymorph", "curse",
+            "haunt", "resurrect", "summon"});//occult
 
-		adverbList.Add (new string[] {"brutally", "painfully", "maliciously", "cruelly", "inhumanely"});
-		adverbList.Add (new string[] {"sneakily", "intelligently", "silently", "dexterously", "adpetly"});
-		adverbList.Add (new string[] {"charmingly", "elegantly", "swankily", "deftly", "nimbly"});
-		adverbList.Add (new string[] {"amorally", "unscrupulously", "unprinciply", "unethically", "slyly"});
-		adverbList.Add (new string[] {"archaically", "arcanely", "magically", "supernaturally", "mystically"});
+		adverbList.Add (new string[] {"brutally", "painfully", "maliciously", "cruelly", "inhumanely",
+            "intimidatingly", "masochistically", "viciously", "with a knife", "with a gun"});
+		adverbList.Add (new string[] {"sneakily", "intelligently", "silently", "dexterously", "adpetly",
+            "stealthily", "carefully", "hilariously", "ridiculously", "cunningly",
+            "respectfully"});
+		adverbList.Add (new string[] {"charmingly", "elegantly", "swankily", "deftly", "nimbly",
+            "sexily", "adorably"});
+		adverbList.Add (new string[] {"amorally", "unscrupulously", "unprinciply", "unethically", "slyly",
+            "cunningly"});
+		adverbList.Add (new string[] {"archaically", "arcanely", "magically", "supernaturally", "mystically",
+            "hauntingly", "creepily"});
 	}
 
 	//distributes the difficulty randomly throughout the different stat requirements
@@ -125,7 +155,7 @@ public class ContractBase {
 		noun = nounList [(int)(Random.value * nounList.Length)];
 		adverb = adverbList [secondMaxLoc] [(int)(Random.value * adverbList [secondMaxLoc].Length)];
 
-		return (verb + " the " + noun + " " + adverb);
+		return (verb + " " + noun + " " + adverb);
 	}
 
 	// Returns how well you did on the contract the last time you ran it
