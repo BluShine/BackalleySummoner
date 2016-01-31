@@ -43,8 +43,8 @@ public class GameManager : MonoBehaviour {
             HeldIngredients.Add(pair.Key, 0);
         }
         open_contracts[5] = new GatherQuest();
+        GenerateContracts();
         instance = this;
-		GenerateContracts ();
 	}
 
 	//updates the UI elements to the proper value
@@ -132,7 +132,6 @@ public class GameManager : MonoBehaviour {
 	ContractBase currentUnassignedContract;
 	//click quest, set it to active if not repeating, go to demon screen
 	public void goToDemonAssignment (int contractIndex) {//call when you click a contract
-		Debug.Log("asssigned");
 		demonScreen.SetActive (true);
 		requestScreen.SetActive (false);
 		currentUnassignedContract = open_contracts[contractIndex];

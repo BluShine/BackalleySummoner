@@ -86,7 +86,6 @@ class DemonAppendagePositioning : MonoBehaviour
       {
          List<Sprite> appendSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Parts/" + appendAttr + "_" + tierNum));
          partSprites[i].sprite = appendSprites.Find(x => x.name == appendAttr + "_" + partNames[i] + "_" + tierNum);
-         Debug.Log(appendAttr + "_" + partNames[i] + "_" + tierNum);
       }
    }
 

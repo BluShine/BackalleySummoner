@@ -110,8 +110,6 @@ public class ContractBase {
 		orderedStats.Sort ();
 		float maxStat = orderedStats[orderedStats.Count - 1];//first and second most important stats
 		int maxLoc = statReqList.IndexOf(maxStat);
-		Debug.Log (statReqList[maxLoc]);
-		Debug.Log (statReqList[maxLoc]);
 		float secondMaxStat = orderedStats[orderedStats.Count - 2];
 		int secondMaxLoc = statReqList.IndexOf (secondMaxStat);
 
