@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour {
 	void Start() {
 		/*Recipes.instance = new Recipes ();
 		Recipes.instance.RecipeStart ();*/
-        reputation = 0;
+        reputation = 30;
         open_contracts = new ContractBase[6];
 		for(int i = 0; i < open_contracts.Length; i++) {
 			open_contracts[i] = new ContractBase (1F);
@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour {
             cashInflux = contract.rewardMoney;
 		cashInflux *= cashInflowMultiplier;
 		hellBucks += cashInflux;
+        Debug.Log(contract.getCachedPerformance());
 		reputation += contract.getCachedPerformance();
 	}
 
