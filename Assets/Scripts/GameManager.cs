@@ -32,19 +32,25 @@ public class GameManager : MonoBehaviour {
 	//methods
 	void Start()
 	{
-		open_contracts = new ContractBase[6];
+        reputation = 0;
+        open_contracts = new ContractBase[6];
 		for(int i = 0; i < open_contracts.Length; i++) {
 			open_contracts[i] = new ContractBase (1F);
 		}
 		HeldIngredients = new Dictionary<string, int>();
-		//open_contracts[5] = new Gather_Contract();
-		instance = this;
+        //open_contracts[5] = new Gather_Contract();
+        while (Recipes.instance == null) ;
+        foreach (KeyValuePair<string, Ingredients> pair in Recipes.instance.name_ingredient)
+        {
+            HeldIngredients.Add(pair.Key, 0);
+        }
+        instance = this;
 	}
 
 	//updates the UI elements to the proper value
 	public void updateUI () {
-		cashBox.text = ((int)hellBucks).ToString ();
-		repBox.text = ((int)reputation).ToString ();
+		cashBox.text = ((int)hellBucks).ToString () + " HELLBUCKS";
+		repBox.text = ((int)reputation).ToString () + " REPUTATION";
 	}
 
 	//adds cash from contract to your cash reserve
@@ -91,7 +97,10 @@ public class GameManager : MonoBehaviour {
 		{
 			foreach(Ingredients.bodyParts part in values)
 			{
-				HashSet<Ingredients> curr = Recipes.instance.part_ingredient[part];
+				HashSet<Ingredients> curr = new HashSet<Ingredients>(Recipes.instance.part_ingredient[part].Where(
+                    elem => Recipes.instance.tier_ingredient[tier].
+                    Contains(elem))
+                    .ToList());
 				int chk = rnd.Next(0, curr.Count);
 				this.HeldIngredients[curr.ToArray()[chk].GetName()]++;
 			}
@@ -99,7 +108,7 @@ public class GameManager : MonoBehaviour {
 		num -= (batches * 3);
 		for (int x = 0; x < num; x++)
 		{
-			HashSet<GameObject> curr = Recipes.instance.tier_ingredient[tier];
+			HashSet<GameObject> curr = Recipes.instance.tier_GmO[tier];
 			int chk = rnd.Next(0, curr.Count);
 			this.HeldIngredients[curr.ToArray()[chk].name]++;
 		}

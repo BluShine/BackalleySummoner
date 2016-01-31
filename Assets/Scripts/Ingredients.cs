@@ -21,6 +21,14 @@ public class Ingredients {
     {
         return this.i_name;
     }
+    public int GetTier()
+    {
+        return this.tier;   
+    }
+    public GameObject GetGmO()
+    {
+        return this.GmO;
+    }
     public Ingredients(string name, int stat, int part, int tier, GameObject GmO)
     {
         this.i_name = name;

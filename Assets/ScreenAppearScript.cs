@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TitleScreenScript : MonoBehaviour {
+public class ScreenAppearScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

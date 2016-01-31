@@ -23,5 +23,6 @@ public class RoundManager : MonoBehaviour {
 		for(int i = 0; i < contractDisplays.Length; i++) {
 			contractDisplays [i].text = gameRunner.open_contracts [i].writeContractTitle();
 		}
+		gameRunner.updateUI ();
 	}
 }

@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 public class Recipes : MonoBehaviour {
-    public Dictionary<string, Ingredients> ingredient_stat = new Dictionary<string, Ingredients>();
+    public Dictionary<string, Ingredients> name_ingredient = new Dictionary<string, Ingredients>();
     public Dictionary<Ingredients.bodyParts, HashSet<Ingredients>> part_ingredient;
     public Dictionary<Ingredients.stats, HashSet<Ingredients>> stat_ingredient;
-    public List<HashSet<GameObject>> tier_ingredient;
+    public List<HashSet<GameObject>> tier_GmO;
+    public List<HashSet<Ingredients>> tier_ingredient;
     // Use this for initialization
     public static Recipes instance;
     public GameObject base_ingredients;
 	void Start () {
+        tier_ingredient = new List<HashSet<Ingredients>>();
         System.Random rnd = new System.Random((int)System.DateTime.Now.Ticks);
-        tier_ingredient = new List<HashSet<GameObject>>(new HashSet<GameObject>[] {});
+        tier_GmO = new List<HashSet<GameObject>>(new HashSet<GameObject>[] {});
         foreach (Transform tiers in base_ingredients.transform)
         {
             HashSet<GameObject> h = new HashSet<GameObject>();
-            tier_ingredient.Add(h);
+            tier_GmO.Add(h);
             foreach (Transform ingredient in tiers)
             {
                 h.Add(ingredient.gameObject);
@@ -33,7 +35,7 @@ public class Recipes : MonoBehaviour {
         {
             stat_ingredient.Add(value, new HashSet<Ingredients>());
         }
-        for (int x = 0; x < tier_ingredient.Count; x++)
+        for (int x = 0; x < tier_GmO.Count; x++)
         {
             List<GameObject> ingredient_l = GetIngredientsTier(x);
             GameObject[] stats = new GameObject[ingredient_l.Count];
@@ -82,6 +84,7 @@ public class Recipes : MonoBehaviour {
                     }
                 }
             }
+            HashSet<Ingredients> tier_set = new HashSet<Ingredients>();
             for (int y = 0; y < stats.Count(); y++)
             {
                 foreach(int prime in parts_v)
@@ -89,7 +92,8 @@ public class Recipes : MonoBehaviour {
                     if(parts_n[y/2] % prime == 0)
                     {
                         Ingredients temp = new Ingredients(stats[y].name, y / 2, prime, x, stats[y]);
-                        ingredient_stat.Add(stats[y].name, temp);
+                        tier_set.Add(temp);
+                        name_ingredient.Add(stats[y].name, temp);
                         stat_ingredient[((Ingredients.stats)(y / 2))].Add(temp);
                         part_ingredient[((Ingredients.bodyParts)prime)].Add(temp);
                         parts_n[y / 2] /= prime;
@@ -97,9 +101,10 @@ public class Recipes : MonoBehaviour {
                     }
                 }
             }
+            tier_ingredient.Add(tier_set);
         }
         instance = this;
-        Debug.Log(ingredient_stat.Count);
+        Debug.Log(name_ingredient.Count);
     }
 	
 	// Update is called once per frame
@@ -113,6 +118,6 @@ public class Recipes : MonoBehaviour {
     }
     List<GameObject> GetIngredientsTier(int x)
     {
-        return this.tier_ingredient[x].ToList();
+        return this.tier_GmO[x].ToList();
     }
 }

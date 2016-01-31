@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: fec95daad5915e540b69c54f4629e92c
+timeCreated: 1454210176
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Power_Body_3
+    21300002: Power_LeftHorn_3
+    21300004: Power_RightHorn_3
+    21300006: Power_LeftArm_3
+    21300008: Power_LeftLeg_3
+    21300010: Power_RightLeg_3
+    21300012: Power_RightArm_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Power_Body_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 232
+        width: 454
+        height: 346
+      alignment: 9
+      pivot: {x: 0.518917, y: 0.49379453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 104.41167, y: 11.147095}
+        - {x: 87.41167, y: 30.147095}
+        - {x: 83.41167, y: 33.147095}
+        - {x: 73.41167, y: 38.147095}
+        - {x: 68.41167, y: 40.147095}
+        - {x: 78.41167, y: 37.147095}
+        - {x: 108.41167, y: 18.147095}
+        - {x: 115.41167, y: -10.852905}
+        - {x: 218.41167, y: 57.147095}
+        - {x: 218.41167, y: 89.147095}
+        - {x: 167.41167, y: 174.1471}
+        - {x: 159.41167, y: 175.1471}
+        - {x: -192.58833, y: 175.1471}
+        - {x: -226.58833, y: 119.147095}
+        - {x: -217.58833, y: 94.147095}
+        - {x: -214.58833, y: 92.147095}
+        - {x: -233.58833, y: 100.147095}
+        - {x: -235.58833, y: 102.147095}
+        - {x: -235.58833, y: 78.147095}
+        - {x: -229.58833, y: 51.147095}
+        - {x: -185.58833, y: 4.1470947}
+        - {x: -80.58833, y: 34.147095}
+        - {x: -80.58833, y: 36.147095}
+        - {x: -77.58833, y: 36.147095}
+        - {x: -84.58833, y: 30.147095}
+        - {x: -96.58833, y: 24.147095}
+        - {x: -123.58833, y: -6.8529053}
+        - {x: -54.588333, y: -143.8529}
+        - {x: -30.588333, y: -155.8529}
+        - {x: 21.411667, y: -170.8529}
+        - {x: 102.41167, y: -170.8529}
+        - {x: 133.41167, y: -142.8529}
+        - {x: 119.41167, y: -119.852905}
+        - {x: 112.41167, y: -12.852905}
+    - name: Power_LeftHorn_3
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 355
+        width: 58
+        height: 98
+      alignment: 9
+      pivot: {x: 0.85167617, y: 0.14945704}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38.397217, y: 83.35321}
+        - {x: -45.397217, y: 68.35321}
+        - {x: -49.397217, y: 57.35321}
+        - {x: -49.397217, y: -0.64678955}
+        - {x: -21.397217, y: -14.64679}
+        - {x: 8.602783, y: -14.64679}
+        - {x: 8.602783, y: 26.35321}
+        - {x: -17.397217, y: 83.35321}
+    - name: Power_RightHorn_3
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 252
+        width: 48
+        height: 72
+      alignment: 9
+      pivot: {x: 0.18688457, y: 0.17197418}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33.02954, y: 57.61786}
+        - {x: 29.029541, y: 59.61786}
+        - {x: 14.029541, y: 59.61786}
+        - {x: -8.970459, y: 12.617859}
+        - {x: -8.970459, y: -12.382141}
+        - {x: 29.029541, y: -12.382141}
+        - {x: 34.02954, y: -10.382141}
+        - {x: 39.02954, y: 5.617859}
+        - {x: 39.02954, y: 49.61786}
+    - name: Power_LeftArm_3
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2
+        width: 174
+        height: 202
+      alignment: 9
+      pivot: {x: 0.9442224, y: 0.82418686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -89.29469, y: -156.48575}
+        - {x: -90.29469, y: -166.48575}
+        - {x: -77.29469, y: -166.48575}
+        - {x: 9.705307, y: -76.48575}
+        - {x: 9.705307, y: 32.51425}
+        - {x: 2.705307, y: 35.51425}
+        - {x: -51.294693, y: 35.51425}
+        - {x: -163.2947, y: -29.485748}
+        - {x: -164.2947, y: -37.48575}
+        - {x: -164.2947, y: -82.48575}
+        - {x: -140.2947, y: -86.48575}
+        - {x: -150.2947, y: -140.48575}
+        - {x: -135.2947, y: -166.48575}
+        - {x: -97.29469, y: -166.48575}
+        - {x: -95.29469, y: -163.48575}
+        - {x: -96.29469, y: -149.48575}
+        - {x: -98.29469, y: -142.48575}
+    - name: Power_LeftLeg_3
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 25
+        width: 56
+        height: 96
+      alignment: 9
+      pivot: {x: 0.40414864, y: 0.90257645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.632324, y: 9.352661}
+        - {x: -22.632324, y: 3.3526611}
+        - {x: -22.632324, y: -77.64734}
+        - {x: -17.632324, y: -86.64734}
+        - {x: 3.3676758, y: -86.64734}
+        - {x: 33.367676, y: -79.64734}
+        - {x: 33.367676, y: -45.64734}
+        - {x: 26.367676, y: -1.6473389}
+        - {x: 13.367676, y: 9.352661}
+    - name: Power_RightLeg_3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 22
+        width: 59
+        height: 101
+      alignment: 9
+      pivot: {x: 0.5545871, y: 0.88264674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -13.720642, y: 11.852676}
+        - {x: -28.720642, y: -2.1473236}
+        - {x: -32.720642, y: -36.147324}
+        - {x: -32.720642, y: -83.14732}
+        - {x: -0.7206421, y: -89.14732}
+        - {x: 18.279358, y: -89.14732}
+        - {x: 26.279358, y: -66.14732}
+        - {x: 26.279358, y: 11.852676}
+    - name: Power_RightArm_3
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 5
+        width: 171
+        height: 218
+      alignment: 9
+      pivot: {x: 0.07937426, y: 0.8742607}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36.427002, y: 27.411163}
+        - {x: -13.572998, y: 27.411163}
+        - {x: -13.572998, y: -85.58884}
+        - {x: 68.427, y: -185.58884}
+        - {x: 84.427, y: -190.58884}
+        - {x: 155.427, y: -190.58884}
+        - {x: 157.427, y: -184.58884}
+        - {x: 157.427, y: -53.588837}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
